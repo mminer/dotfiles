@@ -61,3 +61,6 @@
 [submodule ".vim/bundle/zoomwin"]
 	path = .vim/bundle/zoomwin
 	url = https://github.com/vim-scripts/ZoomWin.git
+[submodule ".vim/bundle/arduino"]
+	path = .vim/bundle/arduino
+	url = https://github.com/vim-scripts/Arduino-syntax-file.git
