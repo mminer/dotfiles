@@ -49,3 +49,15 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule ".vim/bundle/easymotion"]
+	path = .vim/bundle/easymotion
+	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule ".vim/bundle/endwise"]
+	path = .vim/bundle/endwise
+	url = https://github.com/tpope/vim-endwise.git
+[submodule ".vim/bundle/indentobject"]
+	path = .vim/bundle/indentobject
+	url = https://github.com/michaeljsmith/vim-indent-object
+[submodule ".vim/bundle/zoomwin"]
+	path = .vim/bundle/zoomwin
+	url = https://github.com/vim-scripts/ZoomWin.git

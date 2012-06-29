@@ -49,9 +49,6 @@ set wildmode=list:longest,full
 " Ignore certain files in tools like ctrlp
 set wildignore+=*.o,*.obj,.git,*.pyc,*.class,.*
 
-" Default to filename mode in ctrlp
-let g:ctrlp_by_filename = 1
-
 " Use English for spellchecking, but disable spellchecking by default
 if version >= 700
 	set spl=en spell
@@ -64,7 +61,7 @@ filetype plugin on
 syntax enable
 set grepprg=grep\ -nH\ $*
 
-" Disable arrow keys in normal mode (for learning purposes)
+" Disable arrow keys in normal mode
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
@@ -74,15 +71,12 @@ nnoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
-" Remap ctrlp to \t (Command-T muscle memory)
-nnoremap <leader>t :CtrlP<cr>
-
 " Clear search highlights
 nnoremap <leader><space> :noh<cr>
 
 " Fast .vimrc access
-nnoremap <leader>e :e ~/.vim/vimrc<cr>
-nnoremap <leader>o :source ~/.vim/vimrc<cr>
+nnoremap <leader>e :e ~/.vimrc<cr>
+nnoremap <leader>o :source ~/.vimrc<cr>
 
 " NERDTree settings
 nnoremap <leader>b :NERDTree
@@ -112,6 +106,11 @@ autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
 " Use a darker red to highlight errors
 highlight SpellBad ctermbg=52
+
+" CtrlP settings
+nnoremap <leader>t :CtrlP<cr>
+let g:ctrlp_by_filename = 1       " Default to filename mode
+let g:ctrlp_working_path_mode = 0 " Don't manage working directory
 
 let g:syntastic_auto_loc_list=1
 
