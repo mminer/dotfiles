@@ -47,7 +47,7 @@ set wildmenu
 set wildmode=list:longest,full
 
 " Ignore certain files in tools like ctrlp
-set wildignore+=*.o,*.obj,.git,*.pyc,*.class,.*
+set wildignore+=*.o,*.obj,.git,*.pyc,*.class,.*,venv
 
 " Use English for spellchecking, but disable spellchecking by default
 if version >= 700
