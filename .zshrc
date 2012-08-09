@@ -11,3 +11,19 @@ SAVEHIST=1000
 
 export EDITOR='vim'
 
+# Aliases.
+alias pocket='~/Library/Scripts/pocket.py'
+alias notes='vim ~/Dropbox/Notes/Scratchpad.md'
+
+# Simply HTTP server.
+function server() {
+	python -m SimpleHTTPServer "$port"
+	local port="${1:-8000}"
+	open "http://localhost:${port}/"
+}
+
+# Z requirement.
+. `brew --prefix`/etc/profile.d/z.sh
+function precmd () {
+    z --add "$(pwd -P)"
+}

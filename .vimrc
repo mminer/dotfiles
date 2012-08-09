@@ -5,39 +5,39 @@ runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 filetype plugin indent on
 
-set number             " Line numbers
-set relativenumber     " Relative line numbers
-set showcmd            " Show command being typed
-set cursorline         " Highlight current line
-set autoindent         " Autoindentation
-set autoread           " Reload file when it's modified from elsewhere
-set laststatus=2       " Always show the status line
-set encoding=utf-8     " Necessary to show unicode glyphs
-set ignorecase         " Ignore case in searches
-set smartcase          " Use case-sensitive search when a letter is capitalized
-set incsearch          " Highlight search results
-set showmatch
-set hlsearch
-set tabstop=4          " 4 spaces per tab
+set number              " Show line numbers
+set relativenumber      " Use relative line numbers
+set showcmd             " Show command being typed
+set cursorline          " Highlight current line
+set autoindent          " Automatically match indentation on newline
+set autoread            " Reload file when it's modified from elsewhere
+set laststatus=2        " Always show the status line
+set encoding=utf-8      " Necessary to show unicode glyphs
+set ignorecase          " Ignore case in searches
+set smartcase           " Case-sensitive search when a letter is capitalized
+set hlsearch            " Highlight search results
+set incsearch           " 'Live' search; highlight results as they are typed
+set showmatch           " Jump to the matching bracket when one's inserted
+set tabstop=4           " 4 spaces per tab
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab        " Insert actual tab character when tab key is pressed
-set wrap               " Handle long lines correctly
-set textwidth=79
-set colorcolumn=80
-set formatoptions=qrn1
-set noswapfile         " Disable swap files
-set nobackup
-set nowb
-set foldmethod=indent  " Code folding
-set foldlevel=99
-set clipboard=unnamed  " Use system clipboard for yank/put operation
-set bs=2               " Restore backspace key
-set mouse=a            " Enable mouse support in console
-set hidden             " Hide buffers when they're abandoned
-set secure             " Prevent other .vimrc files from overriding
-set t_Co=256           " Let vim know our terminal is capable of 256 colours
-colorscheme molokai    " Set colour scheme
+set noexpandtab         " Insert actual tab character when tab key is pressed
+set wrap                " Wrap long lines
+set textwidth=79        " Wrap lines after 79 characters
+set colorcolumn=80      " Display page guide
+set backupdir=~/.vimtmp " Store backup files outside the working directory
+set directory=~/.vimtmp " Store swap files outside the working directory
+set foldmethod=indent   " Fold based on equal indentation
+set foldlevel=99        " Open all folds when loading a file
+set clipboard=unnamed   " Use system clipboard for yank/put operation
+set backspace=2         " Restore backspace key functionality
+set mouse=a             " Enable mouse support in console
+set hidden              " Hide buffers when they're abandoned
+set secure              " Prevent other .vimrc files from overriding this one
+set scrolloff=3         " Force space above and below cursor
+set t_Co=256            " Let vim know our terminal is capable of 256 colours
+set formatoptions=qron1 " Text formatting options
+colorscheme molokai     " Set colour scheme
 
 " Use TextMate-style invisible characters
 set listchars=tab:▸\ ,eol:¬
@@ -47,7 +47,7 @@ set wildmenu
 set wildmode=list:longest,full
 
 " Ignore certain files in tools like ctrlp
-set wildignore+=*.o,*.obj,.git,*.pyc,*.class,.*,venv
+set wildignore+=*.o,*.obj,.git,*.pyc,*.class,*.unity,.*,venv
 
 " Use English for spellchecking, but disable spellchecking by default
 if version >= 700
@@ -74,21 +74,12 @@ nnoremap k gk
 " Clear search highlights
 nnoremap <leader><space> :noh<cr>
 
-" Fast .vimrc access
-nnoremap <leader>e :e ~/.vimrc<cr>
-nnoremap <leader>o :source ~/.vimrc<cr>
-
-" NERDTree settings
-nnoremap <leader>b :NERDTree
-nnoremap <leader>n :NERDTreeToggle<cr>
-let NERDTreeIgnore=['\.pyc$', '\~$'] " Ignore certain files
-
-" Remap task list to \d ("to [d]o")
-map <leader>d <Plug>TaskList
-
 " Toggle invisible characters
 nnoremap <leader>i :set list!<cr>
 
+" Fast .vimrc access
+nnoremap <leader>e :e ~/.vimrc<cr>
+nnoremap <leader>o :source ~/.vimrc<cr>
 " Easily switch between standard and relative line numbers
 function! ToggleRelativeLineNumber()
 	if (&number == 1)
@@ -107,9 +98,17 @@ autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 " Use a darker red to highlight errors
 highlight SpellBad ctermbg=52
 
+" NERDTree shortcuts
+nnoremap <leader>b :NERDTree
+nnoremap <leader>n :NERDTreeToggle<cr>
+let NERDTreeIgnore=['\.pyc$', '\~$'] " Ignore certain files
+
+" Remap task list to \d ("to [d]o")
+nnoremap <leader>d <Plug>TaskList
+
+
 " CtrlP settings
 nnoremap <leader>t :CtrlP<cr>
-let g:ctrlp_by_filename = 1       " Default to filename mode
 let g:ctrlp_working_path_mode = 0 " Don't manage working directory
 
 let g:syntastic_auto_loc_list=1
