@@ -14,8 +14,9 @@ export EDITOR='vim'
 # Aliases.
 alias pocket='~/Library/Scripts/pocket.py'
 alias notes='vim ~/Dropbox/Notes/Scratchpad.md'
+alias eb='~/Dropbox/Tools/eb/macosx/python2.7/eb'
 
-# Simply HTTP server.
+# Simple HTTP server.
 function server() {
 	python -m SimpleHTTPServer "$port"
 	local port="${1:-8000}"
@@ -27,3 +28,5 @@ function server() {
 function precmd () {
     z --add "$(pwd -P)"
 }
+
+path+='~/Downloads/storm-0.8.0/bin/'

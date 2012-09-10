@@ -25,8 +25,8 @@ set noexpandtab         " Insert actual tab character when tab key is pressed
 set wrap                " Wrap long lines
 set textwidth=79        " Wrap lines after 79 characters
 set colorcolumn=80      " Display page guide
-set backupdir=~/.vimtmp " Store backup files outside the working directory
-set directory=~/.vimtmp " Store swap files outside the working directory
+set noswapfile          " Disable swap files
+set nobackup            " Disable backup files
 set foldmethod=indent   " Fold based on equal indentation
 set foldlevel=99        " Open all folds when loading a file
 set clipboard=unnamed   " Use system clipboard for yank/put operation
@@ -105,7 +105,6 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] " Ignore certain files
 
 " Remap task list to \d ("to [d]o")
 nnoremap <leader>d <Plug>TaskList
-
 
 " CtrlP settings
 nnoremap <leader>t :CtrlP<cr>
