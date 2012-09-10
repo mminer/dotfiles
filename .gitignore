@@ -3,3 +3,4 @@
 *.class
 *.unity
 venv
+.netrwhist
