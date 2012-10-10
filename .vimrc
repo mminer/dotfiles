@@ -1,10 +1,39 @@
 set nocompatible
 
-" Support Pathogen plugin
-runtime bundle/pathogen/autoload/pathogen.vim
-call pathogen#infect()
+" Vundle Initialization
+filetype on
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+" GitHub Bundles
+Bundle 'kien/ctrlp.vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'lepture/vim-jinja'
+Bundle 'tomasr/molokai'
+Bundle 'tpope/vim-markdown'
+Bundle 'edsono/vim-matchit'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-repeat'
+Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/syntastic'
+" vim-scripts Bundles
+Bundle 'Processing'
+Bundle 'TaskList.vim'
+Bundle 'vim-less'
+Bundle 'ZoomWin'
+
 filetype plugin indent on
 
+" General Settings
 set number              " Show line numbers
 set relativenumber      " Use relative line numbers
 set showcmd             " Show command being typed
