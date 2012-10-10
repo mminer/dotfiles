@@ -1,0 +1,32 @@
+" Initialize Vundles
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+" GitHub bundles
+Bundle 'kien/ctrlp.vim'
+Bundle 'Raimondi/delimitMate'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'lepture/vim-jinja'
+Bundle 'tomasr/molokai'
+Bundle 'tpope/vim-markdown'
+Bundle 'edsono/vim-matchit'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-repeat'
+Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/syntastic'
+
+" vim-scripts bundles
+Bundle 'Processing'
+Bundle 'TaskList.vim'
+Bundle 'vim-less'
+Bundle 'ZoomWin'
+

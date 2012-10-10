@@ -1,39 +1,13 @@
 set nocompatible
 
-" Vundle Initialization
-filetype on
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-
-" GitHub Bundles
-Bundle 'kien/ctrlp.vim'
-Bundle 'Raimondi/delimitMate'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'lepture/vim-jinja'
-Bundle 'tomasr/molokai'
-Bundle 'tpope/vim-markdown'
-Bundle 'edsono/vim-matchit'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'tpope/vim-repeat'
-Bundle 'ervandew/supertab'
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/syntastic'
-" vim-scripts Bundles
-Bundle 'Processing'
-Bundle 'TaskList.vim'
-Bundle 'vim-less'
-Bundle 'ZoomWin'
+" Read bundles from separate file
+if filereadable(expand('~/.vimrc.bundles'))
+    source ~/.vimrc.bundles
+endif
 
 filetype plugin indent on
 
-" General Settings
+" General settings
 set number              " Show line numbers
 set relativenumber      " Use relative line numbers
 set showcmd             " Show command being typed
@@ -68,6 +42,11 @@ set t_Co=256            " Let vim know our terminal is capable of 256 colours
 set formatoptions=qron1 " Text formatting options
 colorscheme molokai     " Set colour scheme
 
+" Syntax highlighting
+filetype plugin indent on
+syntax on
+set grepprg=grep\ -nH\ $*
+
 " Use TextMate-style invisible characters
 set listchars=tab:▸\ ,eol:¬
 
@@ -83,12 +62,6 @@ if version >= 700
 	set spl=en spell
 	set nospell
 endif
-
-" Syntax highlighting
-filetype on
-filetype plugin on
-syntax enable
-set grepprg=grep\ -nH\ $*
 
 " Disable arrow keys in normal mode
 nnoremap <up> <nop>
