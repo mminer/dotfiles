@@ -47,7 +47,7 @@ set wildmenu
 set wildmode=list:longest,full
 
 " Ignore certain files in tools like ctrlp
-set wildignore+=*.o,*.obj,.git,*.pyc,*.class,*.unity,.*,venv
+set wildignore+=*.o,*.obj,.git,*.pyc,*.class,*.unity,.*,venv,*.meta
 
 " Use English for spellchecking, but disable spellchecking by default
 if version >= 700
@@ -111,4 +111,5 @@ nnoremap <leader>t :CtrlP<cr>
 let g:ctrlp_working_path_mode = 0 " Don't manage working directory
 
 let g:syntastic_auto_loc_list=1
+let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['html']}
 

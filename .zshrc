@@ -14,7 +14,7 @@ export EDITOR='vim'
 # Aliases.
 alias pocket='~/Library/Scripts/pocket.py'
 alias notes='vim ~/Dropbox/Notes/Scratchpad.md'
-alias eb='~/Dropbox/Tools/eb/macosx/python2.7/eb'
+alias eb='~/Dropbox/Tools/AWS-ElasticBeanstalk-CLI-2-1.1/eb/macosx/python2.7/eb'
 
 # Simple HTTP server.
 function server() {
