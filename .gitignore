@@ -4,4 +4,5 @@
 *.unity
 venv
 .netrwhist
-.vim/bundle
+.vim/bundle/
+!.vim/bundle/vundle/
