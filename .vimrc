@@ -7,7 +7,6 @@ endif
 
 " General settings
 set number              " Show line numbers
-set relativenumber      " Use relative line numbers
 set showcmd             " Show command being typed
 set cursorline          " Highlight current line
 set autoindent          " Automatically match indentation on newline
@@ -25,7 +24,6 @@ set shiftwidth=4
 set noexpandtab         " Insert actual tab character when tab key is pressed
 set wrap                " Wrap long lines
 set textwidth=79        " Wrap lines after 79 characters
-set colorcolumn=80      " Display page guide
 set noswapfile          " Disable swap files
 set nobackup            " Disable backup files
 set foldmethod=indent   " Fold based on equal indentation
@@ -39,6 +37,30 @@ set scrolloff=3         " Force space above and below cursor
 set t_Co=256            " Let vim know our terminal is capable of 256 colours
 set formatoptions=qron1 " Text formatting options
 colorscheme molokai     " Set colour scheme
+
+" Set vim 7.3-specific options
+if v:version >= 703
+	set colorcolumn=80  " Display page guide
+	set relativenumber  " Use relative line numbers
+
+	" Easily switch between standard and relative line numbers
+	function! ToggleRelativeLineNumber()
+		if (&number == 1)
+			set nonumber
+			set relativenumber
+		else
+			set number
+			set norelativenumber
+		endif
+	endfunction
+	nnoremap <leader>r :call ToggleRelativeLineNumber()<CR>
+endif
+
+" Set vim 7.0-specific options
+if v:version >= 700
+	set spl=en spell    " Use English for spellchecking
+	set nospell         " Disable by default
+endif
 
 " Syntax highlighting
 filetype plugin indent on
@@ -54,12 +76,6 @@ set wildmode=list:longest,full
 
 " Ignore certain files in tools like ctrlp
 set wildignore+=*.o,*.obj,.git,*.pyc,*.class,*.unity,.*,venv,*.meta
-
-" Use English for spellchecking, but disable spellchecking by default
-if version >= 700
-	set spl=en spell
-	set nospell
-endif
 
 " Disable arrow keys in normal mode
 nnoremap <up> <nop>
@@ -89,17 +105,6 @@ nnoremap <leader>i :set list!<cr>
 " Fast .vimrc access
 nnoremap <leader>e :e ~/.vimrc<cr>
 nnoremap <leader>o :source ~/.vimrc<cr>
-" Easily switch between standard and relative line numbers
-function! ToggleRelativeLineNumber()
-	if (&number == 1)
-		set nonumber
-		set relativenumber
-	else
-		set number
-		set norelativenumber
-	endif
-endfunction
-nnoremap <leader>r :call ToggleRelativeLineNumber()<CR>
 
 " Remove trailing whitespace on save
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
