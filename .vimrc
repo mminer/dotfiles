@@ -5,8 +5,6 @@ if filereadable(expand('~/.vimrc.bundles'))
     source ~/.vimrc.bundles
 endif
 
-filetype plugin indent on
-
 " General settings
 set number              " Show line numbers
 set relativenumber      " Use relative line numbers
@@ -20,7 +18,7 @@ set ignorecase          " Ignore case in searches
 set smartcase           " Case-sensitive search when a letter is capitalized
 set hlsearch            " Highlight search results
 set incsearch           " 'Live' search; highlight results as they are typed
-set showmatch           " Jump to the matching bracket when one's inserted
+set showmatch           " Show matching brackets / parentheses
 set tabstop=4           " 4 spaces per tab
 set softtabstop=4
 set shiftwidth=4
@@ -69,6 +67,15 @@ nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 
+" Easier moving in tabs and windows
+map <C-J> <C-W>j<C-W>_
+map <C-K> <C-W>k<C-W>_
+map <C-L> <C-W>l<C-W>_
+map <C-H> <C-W>h<C-W>_
+
+" Yank from the cursor to the end of the line, to be consistent with C and D
+nnoremap Y y$
+
 " Move file screen line rather than file line
 nnoremap j gj
 nnoremap k gk
@@ -115,3 +122,4 @@ let g:ctrlp_working_path_mode = 0 " Don't manage working directory
 let g:syntastic_auto_loc_list=1
 let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['html']}
 
+"let g:Powerline_symbols = 'fancy'

@@ -15,6 +15,7 @@ export EDITOR='vim'
 alias pocket='~/Library/Scripts/pocket.py'
 alias notes='vim ~/Dropbox/Notes/Scratchpad.md'
 alias eb='~/Dropbox/Tools/AWS-ElasticBeanstalk-CLI-2-1.1/eb/macosx/python2.7/eb'
+#alias mysql_config='/usr/local/mysql/bin/mysql_config'
 
 # Simple HTTP server.
 function server() {
@@ -30,3 +31,5 @@ function precmd () {
 }
 
 path+='~/Downloads/storm-0.8.0/bin/'
+path+='/usr/local/mysql/bin/'
+export DYLD_LIBRARY_PATH='/usr/local/mysql/lib/'
