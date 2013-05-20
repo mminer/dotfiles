@@ -1,8 +1,7 @@
 .DS_Store
+.netrwhist
 *.pyc
 *.class
-*.unity
 venv
-.netrwhist
 .vim/bundle/
 !.vim/bundle/vundle/
