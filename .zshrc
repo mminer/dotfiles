@@ -1,7 +1,7 @@
 # oh-my-zsh setup.
 ZSH=$HOME/.oh-my-zsh # Set path to oh-my-zsh config file.
 ZSH_THEME='miner'    # Load custom theme
-plugins=(git osx brew python)
+plugins=(git osx brew python fabric colored-man copydir pip)
 source $ZSH/oh-my-zsh.sh
 
 # Enable shared history.
@@ -9,19 +9,18 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
-export EDITOR='vim'
+source $ZSH/oh-my-zsh.sh
+unsetopt correct
+unsetopt correct_all
 
-# Aliases.
-alias pocket='~/Library/Scripts/pocket.py'
-alias notes='vim ~/Dropbox/Notes/Scratchpad.md'
-alias eb='~/Dropbox/Tools/AWS-ElasticBeanstalk-CLI-2-1.1/eb/macosx/python2.7/eb'
-#alias mysql_config='/usr/local/mysql/bin/mysql_config'
+setopt extendedglob
+export EDITOR=/usr/local/bin/vim
+export VISUAL=/usr/local/bin/vim
 
 # Simple HTTP server.
 function server() {
-	python -m SimpleHTTPServer "$port"
-	local port="${1:-8000}"
-	open "http://localhost:${port}/"
+	open "http://localhost:8000/"
+	python -m SimpleHTTPServer 8000
 }
 
 # Z requirement.
@@ -30,6 +29,15 @@ function precmd () {
     z --add "$(pwd -P)"
 }
 
-path+='~/Downloads/storm-0.8.0/bin/'
 path+='/usr/local/mysql/bin/'
 export DYLD_LIBRARY_PATH='/usr/local/mysql/lib/'
+
+path+="$HOME/dotfiles/bin/"
+path+="$HOME/.rvm/bin" # Add RVM to path for scripting
+path+="/usr/local/share/npm/bin/"
+
+foreground-vi() {
+  fg %vi
+}
+zle -N foreground-vi
+bindkey '^Z' foreground-vi
