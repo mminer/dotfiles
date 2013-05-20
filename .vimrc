@@ -100,6 +100,10 @@ nnoremap <down>  <C-w>j<C-w>
 nnoremap <left>  <C-w>h<C-w>
 nnoremap <right> <C-w>l<C-w>
 
+" Create new split windows easier
+nnoremap <leader>- :split<cr>
+nnoremap <leader>= :vsplit<cr>
+
 " Clear search highlights
 nnoremap <leader><space> :noh<cr>
 
@@ -117,13 +121,10 @@ nnoremap <leader>w :setlocal wrap!<cr>:setlocal wrap?<cr>
 nnoremap <leader>t :CtrlP<cr>
 
 " Toggle GitGutter
-nnoremap <leader>g :GitGutterToggle<cr>
+nnoremap <leader>gg :GitGutterToggle<cr>
 
 " Toggle NERDTree
 nnoremap <leader>n :NERDTreeToggle<cr>
-
-" Open Fugitive (enter git command)
-nnoremap <leader>g :G
 
 
 " ================ Plugins ===========================
