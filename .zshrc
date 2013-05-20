@@ -30,10 +30,6 @@ function server() {
 	python -m SimpleHTTPServer 8000
 }
 
-# Add MySQL installation to path.
-path+='/usr/local/mysql/bin/'
-export DYLD_LIBRARY_PATH='/usr/local/mysql/lib/'
-
 # Add other locations to path.
 path+="$HOME/dotfiles/bin/"
 path+="$HOME/.rvm/bin" # Add RVM to path for scripting
