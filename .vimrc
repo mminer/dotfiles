@@ -95,10 +95,10 @@ nnoremap k gk
 nnoremap Y y$
 
 " Move between tabs and split windows using arrow keys
-nnoremap <up>    <C-w>k<C-w>
-nnoremap <down>  <C-w>j<C-w>
-nnoremap <left>  <C-w>h<C-w>
-nnoremap <right> <C-w>l<C-w>
+nnoremap <up>    <C-w>k
+nnoremap <down>  <C-w>j
+nnoremap <left>  <C-w>h
+nnoremap <right> <C-w>l
 
 " Create new split windows easier
 nnoremap <leader>- :split<cr>
@@ -141,7 +141,7 @@ au BufRead,BufNewFile *.hql set filetype=sql
 " Replace status line with Powerline
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
-" Make Powerline update faster
+" Update Powerline faster
 if ! has('gui_running')
     set ttimeoutlen=10
     augroup FastEscape

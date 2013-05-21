@@ -31,6 +31,6 @@ function server() {
 }
 
 # Add other locations to path.
-path+="$HOME/dotfiles/bin/"
+path+="$HOME/bin/"
 path+="$HOME/.rvm/bin" # Add RVM to path for scripting
 path+="/usr/local/share/npm/bin/"
