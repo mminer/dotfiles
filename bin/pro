@@ -1,3 +1,0 @@
-#!/bin/sh
-
-processing-java --run --sketch=$PWD --output=$PWD/build --force
