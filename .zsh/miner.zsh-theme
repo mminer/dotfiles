@@ -1,4 +1,3 @@
-# miner theme.
 PROMPT='%(?.%F{cyan}.%F{red})❯%f '
 RPROMPT='%{$fg_no_bold[magenta]%}%~ $(git_prompt_info)%{$reset_color%}'
 
