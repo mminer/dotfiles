@@ -2,6 +2,8 @@
 .netrwhist
 *.pyc
 *.class
+*.sln
+*.csproj
 venv
 .vim/bundle/
 !.vim/bundle/vundle/
