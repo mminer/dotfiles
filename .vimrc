@@ -1,6 +1,6 @@
 set nocompatible
 
-" Read bundles from separate file
+" Read bundles from separate file.
 if filereadable(expand('~/.vimrc.bundles'))
     source ~/.vimrc.bundles
 endif
@@ -22,7 +22,7 @@ set mouse=a             " Enable mouse support in console
 set nobackup            " Disable backup files
 set noshowmode          " Hide mode text (e.g. -- INSERT --) below status line
 set noswapfile          " Disable swap files
-set number              " Display line numbers
+"set number              " Display line numbers
 set scrolloff=3         " Force space above and below cursor
 set secure              " Prevent other .vimrc files from overriding this one
 set showcmd             " Display command being typed
@@ -41,23 +41,25 @@ set incsearch           " Highlight results as they're typed ("live" sarch)
 set smartcase           " Search case-sensitive when a letter is capitalized
 
 " Tabs
-set noexpandtab         " Insert actual tab character when tab key is pressed
+"set noexpandtab         " Insert actual tab character when tab key is pressed
 set tabstop=4           " 4 spaces per tab
 set softtabstop=4
 set shiftwidth=4
 
-" Use TextMate-style invisible characters
+" Use TextMate-style invisible characters.
 set listchars=tab:▸\ ,eol:¬
 
-" Ignore junk files
+" Ignore junk files.
 set wildignore+=*.o,*.obj,.git,*.pyc,*.class,*.unity,.*,venv,*.meta
 
-" Set vim 7.3-specific options
+colorscheme molokai
+
+" Set vim 7.3-specific options.
 if v:version >= 703
     set colorcolumn=80  " Display page guide
-    set relativenumber  " Use relative line numbers
+    "set relativenumber  " Use relative line numbers
 
-    " Switch between standard and relative line numbers
+    " Switch between standard and relative line numbers.
     function! ToggleRelativeLineNumber()
         if (&number == 1)
             set nonumber relativenumber
@@ -69,84 +71,62 @@ if v:version >= 703
     nnoremap <leader>r :call ToggleRelativeLineNumber()<cr>
 endif
 
-" Turn on syntax highlighting
+" Turn on syntax highlighting.
 filetype plugin indent on
 syntax enable
 
-" Remove trailing whitespace on save
+" Remove trailing whitespace on save.
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
-
-" ================ Colours ===========================
-
-colorscheme molokai
-
-" Use a darker red to highlight errors
-highlight SpellBad ctermbg=52
+" Add HiveQL script extension
+au BufRead,BufNewFile *.hql set filetype=sql
 
 
 " ================ Custom Keybindings ================
 
-" Move file screen line rather than file line
+" Move file screen line rather than file line.
 nnoremap j gj
 nnoremap k gk
 
-" Yank from cursor to end of line, to be consistent with C and D
+" Yank from cursor to end of line, to be consistent with C and D.
 nnoremap Y y$
 
-" Move between tabs and split windows using arrow keys
+" Move between tabs and split windows using arrow keys.
 nnoremap <up>    <C-w>k
 nnoremap <down>  <C-w>j
 nnoremap <left>  <C-w>h
 nnoremap <right> <C-w>l
 
-" Create new split windows easier
+" Create new split windows easier.
 nnoremap <leader>- :split<cr>
 nnoremap <leader>= :vsplit<cr>
 
-" Clear search highlights
+" Clear search highlights.
 nnoremap <leader><space> :noh<cr>
 
-" Fast .vimrc access
+" Fast .vimrc access.
 nnoremap <leader>e :e ~/.vimrc<cr>
 nnoremap <leader>o :source ~/.vimrc<cr>
 
-" Toggle invisible characters
+" Show marks.
+nnoremap <leader>m :marks<cr>
+
+" Toggle invisible characters.
 nnoremap <leader>i :set list!<cr>
 
-" Toggle wrapping
+" Toggle wrapping.
 nnoremap <leader>w :setlocal wrap!<cr>:setlocal wrap?<cr>
 
-" Toggle CtrlP
+" Toggle CtrlP.
 nnoremap <leader>t :CtrlP<cr>
-
-" Toggle GitGutter
-nnoremap <leader>gg :GitGutterToggle<cr>
-
-" Toggle NERDTree
-nnoremap <leader>n :NERDTreeToggle<cr>
 
 
 " ================ Plugins ===========================
 
-let NERDTreeIgnore=['\.pyc$', '\~$'] " Ignore certain files in NERDTree
-let g:ctrlp_working_path_mode = 0    " Don't manage working directory
-let g:gitgutter_enabled = 0			 " Disable GitGutter by default
-let g:syntastic_auto_loc_list=1      " Open error window automatically
+let g:ctrlp_working_path_mode = 0      " Don't manage working directory
+let g:syntastic_auto_loc_list = 1      " Open error window automatically
 let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['html']}
+let g:syntastic_python_checkers = ['flake8']
 
-" Add HiveQL script extension
-au BufRead,BufNewFile *.hql set filetype=sql
-
-" Replace status line with Powerline
+" Replace status line with Powerline.
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-
-" Update Powerline faster
-if ! has('gui_running')
-    set ttimeoutlen=10
-    augroup FastEscape
-        autocmd!
-        au InsertEnter * set timeoutlen=0
-        au InsertLeave * set timeoutlen=1000
-    augroup END
-endif
