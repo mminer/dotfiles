@@ -1,11 +1,12 @@
-EDITOR=`$(brew --prefix)`/bin/vim
+EDITOR=`brew --prefix`/bin/vim
 
 # Add custom scripts location.
 path+=$HOME/Dropbox/Binaries
 
 # Set up oh-my-zsh.
-ZSH=$HOME/.oh-my-zsh # Set path to config file.
-ZSH_THEME='miner'    # Load custom theme.
+ZSH=$HOME/.oh-my-zsh  # Set path to config file
+ZSH_CUSTOM=$HOME/.zsh # Set custom config directory
+ZSH_THEME='miner'     # Load custom theme
 plugins=(brew colored-man colorize copydir copyfile git osx pip python vagrant virtualenv)
 source $ZSH/oh-my-zsh.sh
 
