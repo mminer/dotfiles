@@ -117,9 +117,6 @@ nnoremap <leader>i :set list!<cr>
 " Toggle wrapping.
 nnoremap <leader>w :setlocal wrap!<cr>:setlocal wrap?<cr>
 
-" Toggle CtrlP.
-nnoremap <leader>t :CtrlP<cr>
-
 
 " ================ Plugins ===========================
 
