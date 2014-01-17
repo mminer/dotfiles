@@ -41,7 +41,7 @@ set incsearch           " Highlight results as they're typed ("live" sarch)
 set smartcase           " Search case-sensitive when a letter is capitalized
 
 " Tabs
-"set noexpandtab         " Insert actual tab character when tab key is pressed
+set expandtab           " Use spaces instead of tabs
 set tabstop=4           " 4 spaces per tab
 set softtabstop=4
 set shiftwidth=4
