@@ -28,13 +28,8 @@ bindkey '^Z' foreground
 
 # Simple HTTP server.
 function server() {
-	echo 'Starting static server on localhost:8000.'
-	python -m SimpleHTTPServer 8000
-}
-
-# Recursively search for string in Python files.
-function searchpy() {
-	grep -r --include='*.py' "$1" ${2:-.}
+    echo 'Starting static server on localhost:8000.'
+    python -m SimpleHTTPServer 8000
 }
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
