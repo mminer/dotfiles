@@ -1,9 +1,11 @@
-" Initialize Vundles
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
+
+
+" ================ Plugins ===========================
 
 Bundle 'closetag.vim'
 Bundle 'takac/vim-commandcaps'
@@ -17,12 +19,15 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'Lokaltog/powerline'
 Bundle 'Rename2'
 Bundle 'tpope/vim-repeat'
-Bundle 'mhinz/vim-startify'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
 
-" Languages
+
+
+" ================ Languages ===========================
+
+Bundle 'kchmck/vim-coffee-script'
 Bundle 'fountain.vim'
 Bundle 'lepture/vim-jinja'
 Bundle 'groenewege/vim-less'

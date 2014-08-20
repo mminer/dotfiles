@@ -11,7 +11,6 @@ endif
 set autoindent          " Match indentation on newline
 set autoread            " Reload file when it's modified externally
 set backspace=2         " Restore backspace key functionality
-set clipboard=unnamed   " Use system clipboard for yank and put operations
 set cursorline          " Highlight current line
 set laststatus=2        " Always show status line
 set foldmethod=indent   " Fold based on equal indentation
@@ -34,6 +33,10 @@ set wildmenu            " Tab completion
 set wildmode=list:longest,full
 set wrap                " Wrap long lines
 
+if $TMUX == ''
+    set clipboard=unnamed   " Use system clipboard for yank and put operations
+endif
+
 " Search
 set hlsearch            " Highlight search results
 set ignorecase          " Ignore case in searches
@@ -50,7 +53,7 @@ set shiftwidth=4
 set listchars=tab:▸\ ,eol:¬
 
 " Ignore junk files.
-set wildignore+=*.o,*.obj,.git,*.pyc,*.class,*.unity,.*,venv,*.meta
+set wildignore+=*.o,*.obj,.git,*.pyc,*.class,*.unity,.*,venv,*.meta,*.pdf,*.prefab,*.psd,*.fbx,*.mat,node_modules
 
 colorscheme molokai
 
@@ -117,6 +120,9 @@ nnoremap <leader>i :set list!<cr>
 " Toggle wrapping.
 nnoremap <leader>w :setlocal wrap!<cr>:setlocal wrap?<cr>
 
+" Toggle paste mode.
+set pastetoggle=<leader>p
+
 
 " ================ Plugins ===========================
 
@@ -124,6 +130,8 @@ let g:ctrlp_working_path_mode = 0      " Don't manage working directory
 let g:syntastic_auto_loc_list = 1      " Open error window automatically
 let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['html']}
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
 " Replace status line with Powerline.
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
