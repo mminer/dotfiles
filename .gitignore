@@ -8,3 +8,5 @@ venv
 .vim/bundle/
 !.vim/bundle/vundle/
 __pycache__
+.Spotlight-V100
+.Trashes

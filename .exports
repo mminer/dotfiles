@@ -2,7 +2,10 @@
 export EDITOR=`brew --prefix`/bin/vim
 
 # Tell system where Java is.
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
-# Set envs folder for virtualenvwrapper.
+# Set environments folder for virtualenvwrapper.
 export WORKON_HOME=$HOME/.envs
+
+# Link Homebrew casks in /Applications rather than ~/Applications.
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
