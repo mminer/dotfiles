@@ -1,3 +1,4 @@
+" Initialize Vundles
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
@@ -23,14 +24,11 @@ Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
 
-
-
-" ================ Languages ===========================
-
+" Languages
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'fatih/vim-go'
 Bundle 'fountain.vim'
 Bundle 'lepture/vim-jinja'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-markdown'
 Bundle 'sophacles/vim-processing'
-Bundle 'derekwyatt/vim-scala'
