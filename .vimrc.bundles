@@ -24,7 +24,9 @@ Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
 
-" Languages
+
+" ================ Languages ===========================
+
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'fatih/vim-go'
 Bundle 'fountain.vim'
