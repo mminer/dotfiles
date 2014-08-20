@@ -1,0 +1,8 @@
+# Make vim the default editor.
+export EDITOR=`brew --prefix`/bin/vim
+
+# Tell system where Java is.
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+
+# Set envs folder for virtualenvwrapper.
+export WORKON_HOME=$HOME/.envs

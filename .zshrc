@@ -1,5 +1,4 @@
-export EDITOR=`brew --prefix`/bin/vim
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
+source $HOME/.exports
 
 # Set up oh-my-zsh.
 ZSH=$HOME/.oh-my-zsh  # Set path to config file
@@ -13,7 +12,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Set up virtualenvwrapper.
 source /usr/local/bin/virtualenvwrapper.sh
-export WORKON_HOME=~/.envs
 
 # Turn off ZSH autocorrect.
 unsetopt correct_all
@@ -25,11 +23,5 @@ unsetopt correct_all
 foreground() { fg }
 zle -N foreground
 bindkey '^Z' foreground
-
-# Simple HTTP server.
-function server() {
-    echo 'Starting static server on localhost:8000.'
-    python -m SimpleHTTPServer 8000
-}
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
