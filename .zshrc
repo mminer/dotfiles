@@ -36,3 +36,5 @@ function server() {
 function searchpy() {
 	grep -r --include='*.py' "$1" ${2:-.}
 }
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
