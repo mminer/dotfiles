@@ -15,7 +15,7 @@ set cursorline          " Highlight current line
 set laststatus=2        " Always show status line
 set foldmethod=indent   " Fold based on equal indentation
 set foldlevel=99        " Open all folds when loading a file
-set formatoptions=tcqn  " Enable various text formatting options
+set formatoptions=cqn   " Enable various text formatting options
 set hidden              " Hide buffers when they're abandoned
 set mouse=a             " Enable mouse support in console
 set nobackup            " Disable backup files
@@ -31,7 +31,7 @@ set t_Co=256            " Let vim know our terminal is capable of 256 colours
 set textwidth=79        " Wrap lines after 79 characters
 set wildmenu            " Tab completion
 set wildmode=list:longest,full
-set wrap                " Wrap long lines
+set wrap                " Visually wrap long lines
 
 if $TMUX == ''
     set clipboard=unnamed   " Use system clipboard for yank and put operations
@@ -53,7 +53,7 @@ set shiftwidth=4
 set listchars=tab:▸\ ,eol:¬
 
 " Ignore junk files.
-set wildignore+=*.o,*.obj,.git,*.pyc,*.class,*.unity,.*,venv,*.meta,*.pdf,*.prefab,*.psd,*.fbx,*.mat,node_modules
+set wildignore+=*.o,*.obj,.git,*.pyc,*.class,*.unity,.*,venv,*.meta,*.pdf,*.prefab,*.psd,*.fbx,*.mat,node_modules,bower_components
 
 colorscheme molokai
 
@@ -132,6 +132,5 @@ let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['html']}
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
-
-" Replace status line with Powerline.
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'molokai'

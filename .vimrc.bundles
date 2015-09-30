@@ -8,16 +8,18 @@ Bundle 'gmarik/vundle'
 
 " ================ Plugins ===========================
 
+Bundle 'bling/vim-airline'
 Bundle 'closetag.vim'
 Bundle 'takac/vim-commandcaps'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'editorconfig/editorconfig-vim'
 Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-fugitive'
 Bundle 'edsono/vim-matchit'
 Bundle 'tomasr/molokai'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'Lokaltog/powerline'
 Bundle 'Rename2'
 Bundle 'tpope/vim-repeat'
 Bundle 'ervandew/supertab'
@@ -27,10 +29,10 @@ Bundle 'scrooloose/syntastic'
 
 " ================ Languages ===========================
 
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'fatih/vim-go'
 Bundle 'fountain.vim'
 Bundle 'lepture/vim-jinja'
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-markdown'
 Bundle 'sophacles/vim-processing'
+Bundle 'toyamarinyon/vim-swift'
