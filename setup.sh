@@ -5,6 +5,7 @@ git submodule init
 git submodule update
 
 echo 'Symlinking dotfiles.'
+ln -s .exports ~/.exports
 ln -s .gitignore ~/.gitignore
 ln -s .vim ~/.vim
 ln -s .vimrc ~/.vimrc
