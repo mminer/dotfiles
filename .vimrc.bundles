@@ -1,38 +1,37 @@
-" Initialize Vundles
+" Initialize Vundle
+set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-
-
-" ================ Plugins ===========================
-
-Bundle 'bling/vim-airline'
-Bundle 'closetag.vim'
-Bundle 'takac/vim-commandcaps'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Raimondi/delimitMate'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'editorconfig/editorconfig-vim'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'edsono/vim-matchit'
-Bundle 'tomasr/molokai'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'Rename2'
-Bundle 'tpope/vim-repeat'
-Bundle 'ervandew/supertab'
-Bundle 'tpope/vim-surround'
-Bundle 'scrooloose/syntastic'
+Plugin 'VundleVim/Vundle.vim'
 
 
-" ================ Languages ===========================
+" Plugins
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'takac/vim-commandcaps'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tomasr/molokai'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-repeat'
+Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/syntastic'
 
-Bundle 'fatih/vim-go'
-Bundle 'fountain.vim'
-Bundle 'lepture/vim-jinja'
-Bundle 'groenewege/vim-less'
-Bundle 'tpope/vim-markdown'
-Bundle 'sophacles/vim-processing'
-Bundle 'toyamarinyon/vim-swift'
+" Languages
+Plugin 'applescript.vim'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'fountain.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'tpope/vim-markdown'
+Plugin 'keith/swift.vim'
+
+
+call vundle#end()
+filetype plugin indent on

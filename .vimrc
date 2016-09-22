@@ -6,11 +6,12 @@ if filereadable(expand('~/.vimrc.bundles'))
 endif
 
 
-" ================ General ===========================
-
+" General
 set autoindent          " Match indentation on newline
 set autoread            " Reload file when it's modified externally
 set backspace=2         " Restore backspace key functionality
+set clipboard=unnamed   " Use system clipboard for yank and put operations
+set colorcolumn=80      " Display page guide
 set cursorline          " Highlight current line
 set laststatus=2        " Always show status line
 set foldmethod=indent   " Fold based on equal indentation
@@ -21,7 +22,6 @@ set mouse=a             " Enable mouse support in console
 set nobackup            " Disable backup files
 set noshowmode          " Hide mode text (e.g. -- INSERT --) below status line
 set noswapfile          " Disable swap files
-"set number              " Display line numbers
 set scrolloff=3         " Force space above and below cursor
 set secure              " Prevent other .vimrc files from overriding this one
 set showcmd             " Display command being typed
@@ -32,10 +32,6 @@ set textwidth=79        " Wrap lines after 79 characters
 set wildmenu            " Tab completion
 set wildmode=list:longest,full
 set wrap                " Visually wrap long lines
-
-if $TMUX == ''
-    set clipboard=unnamed   " Use system clipboard for yank and put operations
-endif
 
 " Search
 set hlsearch            " Highlight search results
@@ -55,25 +51,6 @@ set listchars=tab:▸\ ,eol:¬
 " Ignore junk files.
 set wildignore+=*.o,*.obj,.git,*.pyc,*.class,*.unity,.*,venv,*.meta,*.pdf,*.prefab,*.psd,*.fbx,*.mat,node_modules,bower_components
 
-colorscheme molokai
-
-" Set vim 7.3-specific options.
-if v:version >= 703
-    set colorcolumn=80  " Display page guide
-    "set relativenumber  " Use relative line numbers
-
-    " Switch between standard and relative line numbers.
-    function! ToggleRelativeLineNumber()
-        if (&number == 1)
-            set nonumber relativenumber
-        else
-            set number norelativenumber
-        endif
-    endfunction
-
-    nnoremap <leader>r :call ToggleRelativeLineNumber()<cr>
-endif
-
 " Turn on syntax highlighting.
 filetype plugin indent on
 syntax enable
@@ -81,11 +58,11 @@ syntax enable
 " Remove trailing whitespace on save.
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
-" Add HiveQL script extension
-au BufRead,BufNewFile *.hql set filetype=sql
 
+" Custom Keybindings:
 
-" ================ Custom Keybindings ================
+let mapleader = "\<Space>"
+inoremap jj <Esc>
 
 " Move file screen line rather than file line.
 nnoremap j gj
@@ -105,11 +82,7 @@ nnoremap <leader>- :split<cr>
 nnoremap <leader>= :vsplit<cr>
 
 " Clear search highlights.
-nnoremap <leader><space> :noh<cr>
-
-" Fast .vimrc access.
-nnoremap <leader>e :e ~/.vimrc<cr>
-nnoremap <leader>o :source ~/.vimrc<cr>
+nnoremap <leader><leader><leader> :noh<cr>
 
 " Show marks.
 nnoremap <leader>m :marks<cr>
@@ -120,17 +93,27 @@ nnoremap <leader>i :set list!<cr>
 " Toggle wrapping.
 nnoremap <leader>w :setlocal wrap!<cr>:setlocal wrap?<cr>
 
-" Toggle paste mode.
-set pastetoggle=<leader>p
+" Open file finder.
+nnoremap <leader>p :CtrlP<cr>
+
+" Disable going to ex mode.
+nnoremap Q <Nop>
 
 
-" ================ Plugins ===========================
+" Plugins:
 
-let g:ctrlp_working_path_mode = 0      " Don't manage working directory
-let g:syntastic_auto_loc_list = 1      " Open error window automatically
-let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['html']}
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'molokai'
+let g:ctrlp_working_path_mode = 0 " Don't manage working directory
+let g:javascript_plugin_flow = 1
+let g:jsx_ext_required = 0
+let g:syntastic_auto_loc_list = 1 " Open error window automatically
+let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['c', 'cpp', 'html', 'scss']}
+let g:syntastic_python_checkers = ['flake8']
+
+
+" Colours:
+
+colorscheme molokai
+autocmd ColorScheme * highlight Normal ctermbg=None ctermfg=White
+syntax enable
