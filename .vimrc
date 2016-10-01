@@ -108,7 +108,7 @@ let g:ctrlp_working_path_mode = 0 " Don't manage working directory
 let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
 let g:syntastic_auto_loc_list = 1 " Open error window automatically
-let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['c', 'cpp', 'html', 'scss']}
+let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['c', 'cpp', 'html', 'scss', 'swift']}
 let g:syntastic_python_checkers = ['flake8']
 
 

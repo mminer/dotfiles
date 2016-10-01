@@ -22,6 +22,7 @@ unsetopt correct_all
 
 alias baymax='node index.js -p 21010 -d /Users/mminer/Library/Application\ Support/Diamond\ Dev -l /Users/mminer/Library/Logs/Diamond\ Dev/diamond.log'
 alias mkdir='mkdir -p'
+alias pjson='pbpaste | pp_json | vim -c "set syntax=json" -'
 
 
 # Functions:
