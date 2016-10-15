@@ -1,4 +1,0 @@
-#!/bin/sh
-
-git commit --all --fixup=HEAD
-git rebase --interactive --autosquash
