@@ -99,9 +99,13 @@ nnoremap <leader>p :CtrlP<cr>
 " Disable going to ex mode.
 nnoremap Q <Nop>
 
+" Search.
+nnoremap <Leader>f :Ack!<Space>
+
 
 " Plugins:
 
+let g:ackprg = 'ag --ignore-case --nogroup --nocolor --column'
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'molokai'
 let g:ctrlp_working_path_mode = 0 " Don't manage working directory
