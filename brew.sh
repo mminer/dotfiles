@@ -3,6 +3,7 @@
 brew update
 brew upgrade
 
+# CLI Programs
 brew install carthage
 brew install ccat
 brew install git
@@ -22,5 +23,33 @@ brew install tree
 brew install vim --with-override-system-vi
 brew install youtube-dl
 brew install zsh
+
+# GUI Programs
+brew cask install 1password
+brew cask install docker
+brew cask install dropbox
+brew cask install epic-games-launcher
+brew cask install geektool
+brew cask install google-chrome
+brew cask install hammerspoon
+brew cask install iina
+brew cask install imageoptim
+brew cask install iterm2
+brew cask install kaleidoscope
+brew cask install keyboard-maestro
+brew cask install launchbar
+brew cask install limechat
+brew cask install little-snitch
+brew cask install monodraw
+brew cask install openemu
+brew cask install paw
+brew cask install sketch
+brew cask install skype
+brew cask install steam
+brew cask install tiled
+brew cask install transmission
+brew cask install transmit
+brew cask install unity
+brew cask install wwdc
 
 brew cleanup

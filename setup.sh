@@ -25,6 +25,7 @@ mkdir ~/.nvm
 
 echo 'Installing Homebrew and packages.'
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew tap caskroom/cask
 ./brew.sh
 
 echo 'Restoring mackup settings.'
