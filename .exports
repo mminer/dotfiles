@@ -1,5 +1,11 @@
+# Automatically upgrade oh-my-zsh.
+export DISABLE_UPDATE_PROMPT=true
+
 # Make vim the default editor.
-export EDITOR=`brew --prefix`/bin/vim
+export EDITOR=$(brew --prefix)/bin/vim
 
 # Opt out of Homebrew analytics.
 export HOMEBREW_NO_ANALYTICS=1
+
+# Specify NVM directory.
+export NVM_DIR=${HOME}/.nvm

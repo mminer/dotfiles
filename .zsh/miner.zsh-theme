@@ -1,5 +1,5 @@
 PROMPT='$(virtualenv_prompt_info)%(?.%F{cyan}.%F{red})❯%f '
-RPROMPT='%{$fg_no_bold[magenta]%}%~ $(git_prompt_info)%{$reset_color%}'
+RPROMPT='$(vi_mode_prompt_info) %{$fg_no_bold[magenta]%}%~ $(git_prompt_info)%{$reset_color%}'
 
 # Git colours.
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_no_bold[white]%}[%{$fg_no_bold[yellow]%}"

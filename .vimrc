@@ -68,6 +68,9 @@ inoremap jj <Esc>
 nnoremap j gj
 nnoremap k gk
 
+" Disable going to ex mode.
+nnoremap Q <Nop>
+
 " Yank from cursor to end of line, to be consistent with C and D.
 nnoremap Y y$
 
@@ -77,39 +80,31 @@ nnoremap <down>  <C-w>j
 nnoremap <left>  <C-w>h
 nnoremap <right> <C-w>l
 
+" Clear search highlights.
+nnoremap <leader><leader><leader> :noh<cr>
+
 " Create new split windows easier.
 nnoremap <leader>- :split<cr>
 nnoremap <leader>= :vsplit<cr>
 
-" Clear search highlights.
-nnoremap <leader><leader><leader> :noh<cr>
+" Toggle invisible characters.
+nnoremap <leader>i :set list!<cr>
 
 " Show marks.
 nnoremap <leader>m :marks<cr>
 
-" Toggle invisible characters.
-nnoremap <leader>i :set list!<cr>
+" Open file finder.
+nnoremap <leader>p :CtrlP<cr>
 
 " Toggle wrapping.
 nnoremap <leader>w :setlocal wrap!<cr>:setlocal wrap?<cr>
 
-" Open file finder.
-nnoremap <leader>p :CtrlP<cr>
-
-" Disable going to ex mode.
-nnoremap Q <Nop>
-
-" Search.
-nnoremap <Leader>f :Ack!<Space>
-
 
 " Plugins:
 
-let g:ackprg = 'ag --ignore-case --nogroup --nocolor --column'
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'molokai'
 let g:ctrlp_working_path_mode = 0 " Don't manage working directory
-let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
 let g:syntastic_auto_loc_list = 1 " Open error window automatically
 let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['c', 'cpp', 'html', 'scss', 'swift']}

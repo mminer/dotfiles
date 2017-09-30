@@ -8,7 +8,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 
 " Plugins
-Plugin 'mileszs/ack.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'takac/vim-commandcaps'
@@ -19,6 +18,7 @@ Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tomasr/molokai'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-repeat'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-surround'
@@ -26,12 +26,13 @@ Plugin 'scrooloose/syntastic'
 
 " Languages
 Plugin 'applescript.vim'
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'fountain.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'tpope/vim-markdown'
+Plugin 'ethereum/vim-solidity'
 Plugin 'keith/swift.vim'
+Plugin 'davidoc/taskpaper.vim'
 
 
 call vundle#end()

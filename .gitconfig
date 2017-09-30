@@ -1,16 +1,16 @@
-[user]
-	name = Matthew Miner
-	email = matthew@matthewminer.com
 [credential]
 	helper = osxkeychain
-[rebase]
-	autostash = true
-	autosquash = true
-[alias]
-	g = log --graph --all --oneline --decorate
-	commend = commit --amend --no-edit
-	s = status --short --branch
 [filter "lfs"]
 	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
 	required = true
+	smudge = git-lfs smudge -- %f
+[push]
+	followTags = true
+[rebase]
+	autosquash = true
+	autostash = true
+[status]
+	showUntrackedFiles = all
+[user]
+	email = matthew@matthewminer.com
+	name = Matthew Miner
