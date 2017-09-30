@@ -26,19 +26,20 @@ brew install zsh
 
 # GUI Programs
 brew cask install 1password
+brew cask install dash
 brew cask install docker
 brew cask install dropbox
 brew cask install epic-games-launcher
 brew cask install geektool
 brew cask install google-chrome
 brew cask install hammerspoon
+brew cask install hazel
 brew cask install iina
 brew cask install imageoptim
 brew cask install iterm2
 brew cask install kaleidoscope
 brew cask install keyboard-maestro
 brew cask install launchbar
-brew cask install limechat
 brew cask install little-snitch
 brew cask install monodraw
 brew cask install openemu
