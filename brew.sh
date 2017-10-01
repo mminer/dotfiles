@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-brew update
-brew upgrade
-
 # CLI Programs
 brew install carthage
 brew install ccat
@@ -23,6 +20,14 @@ brew install tree
 brew install vim --with-override-system-vi
 brew install youtube-dl
 brew install zsh
+
+# QuickLook Plugins
+brew cask install betterzipql
+brew cask install qlcolorcode
+brew cask install qlmarkdown
+brew cask install qlstephen
+brew cask install quicklook-csv
+brew cask install quicklook-json
 
 # GUI Programs
 brew cask install 1password
@@ -51,6 +56,7 @@ brew cask install tiled
 brew cask install transmission
 brew cask install transmit
 brew cask install unity
+brew cask install vmware-fusion
 brew cask install wwdc
 
 brew cleanup
