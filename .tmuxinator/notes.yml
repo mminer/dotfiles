@@ -1,0 +1,7 @@
+# ~/.tmuxinator/notes.yml
+
+name: Notes
+root: ~/Dropbox/Notes
+
+windows:
+  - Notes: vim -c "autocmd vimenter * NERDTree" TODO.taskpaper

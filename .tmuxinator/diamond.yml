@@ -1,0 +1,17 @@
+# ~/.tmuxinator/diamond.yml
+
+name: Diamond
+root: ~/Code
+
+windows:
+  - Picasso:
+      root: ~/Code/picasso-mac
+  - Van Gogh:
+      layout: main-horizontal
+      panes:
+        - vim
+        - npm run watch
+        - npm start
+      root: ~/Code/van-gogh
+  - Gatekeeper:
+      root: ~/Code/gatekeeper

@@ -18,6 +18,7 @@ ln -s ${PWD}/.mackup.cfg ~/.mackup.cfg
 ln -s ${PWD}/.oh-my-zsh ~/.oh-my-zsh
 ln -s ${PWD}/.ssh/config ~/.ssh/config
 ln -s ${PWD}/.tmux.conf ~/.tmux.conf
+ln -s ${PWD}/.tmuxinator ~/.tmuxinator
 ln -s ${PWD}/.vim ~/.vim
 ln -s ${PWD}/.vimrc ~/.vimrc
 ln -s ${PWD}/.vimrc.bundles ~/.vimrc.bundles
@@ -36,6 +37,9 @@ export NVM_DIR=${HOME}/.nvm
 source $(brew --prefix nvm)/nvm.sh
 nvm install 8
 npm install --global svgo
+
+echo 'Installing tmuxinator'
+gem install tmuxinator
 
 echo 'Installing vim plugins.'
 vim +PluginInstall +qall

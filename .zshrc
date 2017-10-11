@@ -21,5 +21,6 @@ source ${HOME}/.iterm2_shell_integration.zsh
 unsetopt correct_all
 
 # Reopen suspended session using ctrl-z (same command used to suspend it).
-zle -N fg
-bindkey '^Z' fg
+foreground() { fg }
+zle -N foreground
+bindkey '^Z' foreground

@@ -93,6 +93,9 @@ nnoremap <leader>i :set list!<cr>
 " Show marks.
 nnoremap <leader>m :marks<cr>
 
+" Toggle NERDTree.
+nnoremap <leader>n :NERDTreeToggle<cr>
+
 " Open file finder.
 nnoremap <leader>p :CtrlP<cr>
 

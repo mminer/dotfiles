@@ -12,10 +12,12 @@ brew install nvm
 brew install python
 brew install python3
 brew install reattach-to-user-namespace
+brew install ruby
 brew install swiftlint
 brew install switchaudio-osx
 brew install the_silver_searcher
 brew install tmux
+brew install tmuxinator-completion
 brew install tree
 brew install vim --with-override-system-vi
 brew install youtube-dl
