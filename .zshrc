@@ -17,6 +17,9 @@ source $(brew --prefix nvm)/nvm.sh
 # Enable iTerm shell integration.
 source ${HOME}/.iterm2_shell_integration.zsh
 
+# Enable fuzzy finder completion and key bindings.
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Turn off ZSH autocorrect.
 unsetopt correct_all
 

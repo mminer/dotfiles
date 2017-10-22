@@ -44,6 +44,10 @@ gem install tmuxinator
 echo 'Installing vim plugins.'
 vim +PluginInstall +qall
 
+echo 'Installing key bindings for fuzzy finder.'
+$(brew --prefix)/opt/fzf/install --completion --key-bindings --no-update-rc \
+    --no-bash --no-fish
+
 echo 'Changing default shell to ZSH.'
 echo $(brew --prefix)/bin/zsh | sudo tee -a /etc/shells
 chsh -s $(brew --prefix)/bin/zsh

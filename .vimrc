@@ -1,4 +1,5 @@
 set nocompatible
+set rtp+=/usr/local/opt/fzf
 
 " Read bundles from separate file.
 if filereadable(expand('~/.vimrc.bundles'))
@@ -97,7 +98,11 @@ nnoremap <leader>m :marks<cr>
 nnoremap <leader>n :NERDTreeToggle<cr>
 
 " Open file finder.
-nnoremap <leader>p :CtrlP<cr>
+nnoremap <leader>; :Buffers<cr>
+nnoremap <leader>t :Files<cr>
+
+" Toggle undo tree.
+nnoremap <leader>u :UndotreeToggle<cr>
 
 " Toggle wrapping.
 nnoremap <leader>w :setlocal wrap!<cr>:setlocal wrap?<cr>
@@ -107,11 +112,7 @@ nnoremap <leader>w :setlocal wrap!<cr>:setlocal wrap?<cr>
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'molokai'
-let g:ctrlp_working_path_mode = 0 " Don't manage working directory
 let g:jsx_ext_required = 0
-let g:syntastic_auto_loc_list = 1 " Open error window automatically
-let g:syntastic_mode_map = {'mode': 'active', 'passive_filetypes': ['c', 'cpp', 'html', 'scss', 'swift']}
-let g:syntastic_python_checkers = ['flake8']
 
 
 " Colours:

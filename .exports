@@ -4,6 +4,10 @@ export DISABLE_UPDATE_PROMPT=true
 # Make vim the default editor.
 export EDITOR=$(brew --prefix)/bin/vim
 
+# Use ag as source for fuzzy finder.
+export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
+
 # Opt out of Homebrew analytics.
 export HOMEBREW_NO_ANALYTICS=1
 

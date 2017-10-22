@@ -10,19 +10,21 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugins
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'w0rp/ale'
 Plugin 'takac/vim-commandcaps'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'tpope/vim-eunuch'
 Plugin 'tpope/vim-fugitive'
+Plugin 'junegunn/fzf.vim'
 Plugin 'tomasr/molokai'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-repeat'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/syntastic'
+Plugin 'mbbill/undotree'
+
 
 " Languages
 Plugin 'applescript.vim'
