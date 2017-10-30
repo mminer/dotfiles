@@ -112,7 +112,11 @@ nnoremap <leader>w :setlocal wrap!<cr>:setlocal wrap?<cr>
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'molokai'
+let g:ale_linters = { 'cs': [], 'html': [] }
 let g:jsx_ext_required = 0
+let g:SuperTabDefaultCompletionType = 'context'
+
+autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
 
 
 " Colours:

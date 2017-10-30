@@ -3,6 +3,7 @@
 # CLI Programs
 brew install carthage
 brew install ccat
+brew install cmake
 brew install fzf
 brew install git
 brew install git-lfs

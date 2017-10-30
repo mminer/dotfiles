@@ -38,11 +38,12 @@ source $(brew --prefix nvm)/nvm.sh
 nvm install 8
 npm install --global svgo
 
-echo 'Installing tmuxinator'
-gem install tmuxinator
+echo 'Installing Ruby packages.'
+gem install jekyll jekyll-feed tmuxinator
 
 echo 'Installing vim plugins.'
 vim +PluginInstall +qall
+(cd ~/.vim/bundle/omnisharp-vim/server && xbuild)
 
 echo 'Installing key bindings for fuzzy finder.'
 $(brew --prefix)/opt/fzf/install --completion --key-bindings --no-update-rc \
