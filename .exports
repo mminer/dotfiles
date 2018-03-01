@@ -4,8 +4,8 @@ export DISABLE_UPDATE_PROMPT=true
 # Make vim the default editor.
 export EDITOR=$(brew --prefix)/bin/vim
 
-# Use ag as source for fuzzy finder.
-export FZF_DEFAULT_COMMAND='rg --files'
+# Use ripgrep as source for fuzzy finder.
+export FZF_DEFAULT_COMMAND="rg --files"
 export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 
 # Opt out of Homebrew analytics.
@@ -14,12 +14,5 @@ export HOMEBREW_NO_ANALYTICS=1
 # Specify NVM directory.
 export NVM_DIR=${HOME}/.nvm
 
-# Use rg to generate the list for directory completion.
-_fzf_compgen_dir() {
-  rg --files "$1" | only-dir "$1"
-}
-
-# Use rg instead of the default find command for listing path candidates.
-_fzf_compgen_path() {
-  rg --files "$1" | with-dir "$1"
-}
+# Specify default options for ripgrep via config file.
+export RIPGREP_CONFIG_PATH=${HOME}/.ripgreprc

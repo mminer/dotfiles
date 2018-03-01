@@ -1,0 +1,35 @@
+let mapleader = "\<Space>"
+inoremap jj <Esc>
+
+" Move file screen line rather than file line.
+noremap j gj
+noremap k gk
+
+" Disable going to ex mode.
+noremap Q gq
+
+" Yank from cursor to end of line, to be consistent with C and D.
+noremap Y y$
+
+" Move between tabs and split windows using arrow keys.
+noremap <up>    <C-w>k
+noremap <down>  <C-w>j
+noremap <left>  <C-w>h
+noremap <right> <C-w>l
+
+noremap <leader>; :Buffers<cr>
+noremap <leader>m :marks<cr>
+noremap <leader>n :NERDTreeToggle<cr>
+noremap <leader>t :Files<cr>
+noremap <leader>u :UndotreeToggle<cr>
+noremap <leader>w :set wrap!<cr>
+
+" Create new split windows easier.
+noremap <leader>- :split<cr>
+noremap <leader>= :vsplit<cr>
+
+" Toggle invisible characters.
+noremap <leader>i :set list!<cr>
+
+" Clear search highlights.
+noremap <leader><leader><leader> :noh<cr>

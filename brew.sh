@@ -10,7 +10,6 @@ brew install git-lfs
 brew install httpie
 brew install lua
 brew install mackup
-brew install mono
 brew install nvm
 brew install python
 brew install python3
@@ -20,6 +19,7 @@ brew install swiftlint
 brew install switchaudio-osx
 brew install tmux
 brew install tmuxinator-completion
+brew install tldr
 brew install tree
 brew install vim --with-override-system-vi
 brew install youtube-dl
@@ -38,8 +38,6 @@ brew cask install 1password
 brew cask install dash
 brew cask install docker
 brew cask install dropbox
-brew cask install epic-games-launcher
-brew cask install geektool
 brew cask install google-chrome
 brew cask install hammerspoon
 brew cask install hazel

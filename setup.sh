@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 echo 'Creating expected folders.'
-mkdir ~/.nvm
-mkdir ~/.ssh
+mkdir ~/.nvm ~/.ssh
 
 echo 'Pulling git submodules.'
 git submodule init
@@ -16,12 +15,14 @@ ln -s ${PWD}/.gitignore ~/.gitignore
 ln -s ${PWD}/.hushlogin ~/.hushlogin
 ln -s ${PWD}/.mackup.cfg ~/.mackup.cfg
 ln -s ${PWD}/.oh-my-zsh ~/.oh-my-zsh
+ln -s ${PWD}/.ripgreprc ~/.ripgreprc
 ln -s ${PWD}/.ssh/config ~/.ssh/config
 ln -s ${PWD}/.tmux.conf ~/.tmux.conf
 ln -s ${PWD}/.tmuxinator ~/.tmuxinator
 ln -s ${PWD}/.vim ~/.vim
 ln -s ${PWD}/.vimrc ~/.vimrc
-ln -s ${PWD}/.vimrc.bundles ~/.vimrc.bundles
+ln -s ${PWD}/.vimrc.keybindings ~/.vimrc.keybindings
+ln -s ${PWD}/.vimrc.plugins ~/.vimrc.plugins
 ln -s ${PWD}/.zsh ~/.zsh
 ln -s ${PWD}/.zshrc ~/.zshrc
 ln -s ${PWD}/bin ~/bin
@@ -42,7 +43,7 @@ echo 'Installing Ruby packages.'
 gem install jekyll jekyll-feed tmuxinator
 
 echo 'Installing vim plugins.'
-vim +PluginInstall +qall
+vim +PlugInstall +qall
 (cd ~/.vim/bundle/omnisharp-vim/server && xbuild)
 
 echo 'Installing key bindings for fuzzy finder.'
@@ -55,9 +56,6 @@ chsh -s $(brew --prefix)/bin/zsh
 
 echo 'Configuring macOS.'
 ./macos.sh
-
-echo 'Enabling iTerm shell integration.'
-curl -L https://iterm2.com/misc/zsh_startup.in -o ~/.iterm2_shell_integration.zsh
 
 echo 'Restoring mackup settings.'
 read -p "Sign into Dropbox and wait for syncing to complete before hitting enter." -n1 -s

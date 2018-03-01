@@ -1,0 +1,13 @@
+set autoindent
+set backspace=indent,eol,start
+set clipboard=unnamed
+set cursorline
+set hlsearch
+set expandtab
+set ignorecase
+set incsearch
+set scrolloff=5
+set smartcase
+set shiftwidth=4
+set ttimeout
+set ttimeoutlen=100
