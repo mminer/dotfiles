@@ -21,8 +21,6 @@ ln -s ${PWD}/.tmux.conf ~/.tmux.conf
 ln -s ${PWD}/.tmuxinator ~/.tmuxinator
 ln -s ${PWD}/.vim ~/.vim
 ln -s ${PWD}/.vimrc ~/.vimrc
-ln -s ${PWD}/.vimrc.keybindings ~/.vimrc.keybindings
-ln -s ${PWD}/.vimrc.plugins ~/.vimrc.plugins
 ln -s ${PWD}/.zsh ~/.zsh
 ln -s ${PWD}/.zshrc ~/.zshrc
 ln -s ${PWD}/bin ~/bin
