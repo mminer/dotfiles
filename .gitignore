@@ -11,6 +11,7 @@
 .sass-cache
 .vagrant
 .vim/plugged
+.vs
 __pycache__
 node_modules
 venv

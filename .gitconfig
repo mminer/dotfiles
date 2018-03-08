@@ -1,3 +1,5 @@
+[core]
+	excludesfiles = /Users/mminer/.gitignore
 [credential]
 	helper = osxkeychain
 [filter "lfs"]
