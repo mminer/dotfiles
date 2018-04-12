@@ -81,6 +81,11 @@ noremap <leader>i :set list!<cr>
 noremap <leader><leader><leader> :noh<cr>
 
 
+" Custom Commands:
+
+com! FormatJSON %!python -m json.tool
+
+
 " Plugins:
 
 call plug#begin('~/.vim/plugged')
