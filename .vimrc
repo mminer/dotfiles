@@ -44,7 +44,7 @@ autocmd BufWritePre * %s/\s\+$//e
 
 " Key Bindings:
 
-let mapleader = "\<Space>"
+let mapleader = " "
 inoremap jj <Esc>
 
 " Move file screen line rather than file line.
@@ -63,16 +63,16 @@ noremap <down>  <C-w>j
 noremap <left>  <C-w>h
 noremap <right> <C-w>l
 
+" Create new split windows easier.
+noremap <leader>- :split<cr>
+noremap <leader>= :vsplit<cr>
+
 noremap <leader>; :Buffers<cr>
 noremap <leader>m :marks<cr>
 noremap <leader>n :NERDTreeToggle<cr>
 noremap <leader>t :Files<cr>
 noremap <leader>u :UndotreeToggle<cr>
 noremap <leader>w :set wrap!<cr>
-
-" Create new split windows easier.
-noremap <leader>- :split<cr>
-noremap <leader>= :vsplit<cr>
 
 " Toggle invisible characters.
 noremap <leader>i :set list!<cr>
@@ -122,7 +122,7 @@ let g:airline_section_z = airline#section#create(['%3p%% ', 'linenr', 'maxlinenr
 let g:airline_symbols = get(g:,'airline_symbols',{})
 let g:airline_symbols.maxlinenr = ''
 let g:airline_theme = 'molokai'
-let g:ale_linters = { 'cs': [], 'html': [] }
+let g:ale_linters = { 'cs': [], 'html': [], 'swift': [] }
 let g:jsx_ext_required = 0
 let g:SuperTabDefaultCompletionType = 'context'
 

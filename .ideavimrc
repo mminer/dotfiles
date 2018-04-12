@@ -1,0 +1,6 @@
+source ~/.vimrc
+noremap <leader>c<leader> :action CommentByLineComment<cr>
+noremap <leader>i :action EditorToggleShowWhitespaces<cr>
+noremap <leader>n :action ActivateProjectToolWindow<cr>
+noremap <leader>t :action SearchEverywhere<cr>
+noremap <leader>w :action EditorToggleUseSoftWraps<cr>

@@ -13,6 +13,7 @@ ln -s ${PWD}/.exports ~/.exports
 ln -s ${PWD}/.gitconfig ~/.gitconfig
 ln -s ${PWD}/.gitignore ~/.gitignore
 ln -s ${PWD}/.hushlogin ~/.hushlogin
+ln -s ${PWD}/.ideavimrc ~/.ideavimrc
 ln -s ${PWD}/.mackup.cfg ~/.mackup.cfg
 ln -s ${PWD}/.oh-my-zsh ~/.oh-my-zsh
 ln -s ${PWD}/.ripgreprc ~/.ripgreprc

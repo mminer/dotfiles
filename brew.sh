@@ -4,6 +4,7 @@
 brew install carthage
 brew install ccat
 brew install cmake
+brew install diff-so-fancy
 brew install fzf
 brew install git
 brew install git-lfs
