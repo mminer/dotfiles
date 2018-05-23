@@ -11,6 +11,12 @@ ZSH_THEME='miner'
 plugins=(colored-man colorize copydir copyfile docker encode64 git history httpie jsontools npm osx pip python redis-cli vi-mode xcode z)
 source ${ZSH}/oh-my-zsh.sh
 
+# Set up highlighting.
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Enable extended completions.
+fpath=($(brew --prefix)/share/zsh-completions $fpath)
+
 # Set up NVM.
 source $(brew --prefix nvm)/nvm.sh
 
