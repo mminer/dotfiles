@@ -25,8 +25,6 @@ brew install tree
 brew install vim --with-override-system-vi
 brew install youtube-dl
 brew install zsh
-brew install zsh-completions
-brew install zsh-syntax-highlighting
 
 # QuickLook Plugins
 brew cask install betterzipql
