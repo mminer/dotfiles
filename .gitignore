@@ -9,6 +9,8 @@
 .Spotlight-V100
 .Trashes
 .sass-cache
+.tmux/plugins
+!.tmux/plugins/tpm
 .vagrant
 .vim/plugged
 .vs
