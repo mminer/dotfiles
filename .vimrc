@@ -3,9 +3,6 @@ set nocompatible
 
 " General:
 
-set autoindent
-set autoread
-set backspace=indent,eol,start
 set clipboard=unnamed
 set colorcolumn=+1
 set cursorline
@@ -17,7 +14,6 @@ set formatoptions=cqn
 set hidden
 set hlsearch
 set ignorecase
-set incsearch
 set listchars=tab:▸\ ,eol:¬
 set mouse=a
 set nofoldenable
@@ -31,10 +27,7 @@ set showmatch
 set smartcase
 set softtabstop=-1
 set textwidth=80
-set ttimeout
-set ttimeoutlen=100
 set wildignore+=*.o,*.obj,.git,*.pyc,*.class,*.unity,.*,venv,*.meta,*.pdf,*.prefab,*.psd,*.fbx,*.mat,node_modules,bower_components
-set wildmenu
 set wildmode=list:longest,full
 
 " Remove trailing whitespace on save.
@@ -107,6 +100,7 @@ Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
 Plug 'ethereum/vim-solidity'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-surround'
@@ -131,4 +125,3 @@ let g:SuperTabDefaultCompletionType = 'context'
 
 colorscheme molokai
 autocmd ColorScheme * highlight Normal ctermbg=None ctermfg=White
-syntax on
