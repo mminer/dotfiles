@@ -20,4 +20,8 @@ export RIPGREP_CONFIG_PATH=${HOME}/.ripgreprc
 # Set up oh-my-zsh.
 export ZSH=${HOME}/.oh-my-zsh
 export ZSH_CUSTOM=${HOME}/.zsh
+export ZSH_DISABLE_COMPFIX=true
 export ZSH_THEME='miner'
+
+# Configure tmux.
+export ZSH_TMUX_AUTOSTART=true

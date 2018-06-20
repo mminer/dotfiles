@@ -21,6 +21,7 @@ plugins=(
     pip
     python
     redis-cli
+    tmux
     vi-mode
     xcode
     z
