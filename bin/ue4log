@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# Searches upwards for an Unreal project then opens its most recent log file.
+
+while [[ "${PWD}" != "/" ]]; do
+    unreal_project="$(ls *.uproject 2>/dev/null)"
+
+    if [ -z "${unreal_project}" ]; then
+        cd ..
+        continue
+    fi
+
+    project_name="$(basename "${unreal_project}" .uproject)"
+    log="Saved/Logs/${project_name}.log"
+
+    if [ ! -f "${log}" ]; then
+        echo "An Unreal project was found but no log file exists for it."
+        exit 1
+    fi
+
+    "${EDITOR}" "${log}"
+    exit 0
+done
+
+echo "No Unreal project found in this directory or parent directories."
+exit 1
