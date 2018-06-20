@@ -1,9 +1,7 @@
 *.0
 *.a
 *.class
-*.csproj
 *.pyc
-*.sln
 *.so
 .DS_Store
 .Spotlight-V100
