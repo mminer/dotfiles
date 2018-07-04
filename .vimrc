@@ -19,7 +19,6 @@ set mouse=a
 set nofoldenable
 set noshowmode
 set noswapfile
-set rtp+=/usr/local/opt/fzf
 set scrolloff=5
 set shiftwidth=4
 set showcmd
@@ -104,6 +103,10 @@ Plug 'tpope/vim-surround'
 Plug 'mbbill/undotree'
 
 call plug#end()
+
+" Ensure Vim can find fzf; see https://github.com/junegunn/fzf#as-vim-plugin.
+set rtp+=/usr/local/opt/fzf " If installed using Homebrew
+set rtp+=~/.fzf             " If installed using Git
 
 let g:airline_powerline_fonts = 1
 let g:airline_section_b = ''
