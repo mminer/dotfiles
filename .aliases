@@ -1,5 +1,2 @@
 alias mkdir='mkdir -p'
 
-if grep -qE "(Microsoft|WSL)" /proc/version &> /dev/null; then
-    alias open='cmd.exe /C start'
-fi

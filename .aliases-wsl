@@ -1,0 +1,2 @@
+alias open='cmd.exe /C start'
+alias taskkill='taskkill.exe /F /IM'
