@@ -9,6 +9,7 @@ git submodule update
 
 echo 'Symlinking dotfiles.'
 ln -s ${PWD}/.aliases ~/.aliases
+ln -s ${PWD}/.aliases-wsl ~/.aliases-wsl
 ln -s ${PWD}/.exports ~/.exports
 ln -s ${PWD}/.gitconfig ~/.gitconfig
 ln -s ${PWD}/.gitignore ~/.gitignore
