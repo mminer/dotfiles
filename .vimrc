@@ -123,4 +123,5 @@ let g:SuperTabDefaultCompletionType = 'context'
 " Colours:
 
 colorscheme molokai
-autocmd ColorScheme * highlight Normal ctermbg=None ctermfg=White
+autocmd ColorScheme * highlight Normal ctermbg=none ctermfg=white
+set background=dark
