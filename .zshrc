@@ -10,17 +10,19 @@ source ${HOME}/.exports
 export PATH=${HOME}/bin:${PATH}
 
 plugins=(
-    colored-man
+    colored-man-pages
     colorize
     copydir
     copyfile
     docker
+    docker-compose
     encode64
     git
     history
     httpie
     jsontools
     npm
+    npx
     nvm
     osx
     pip
