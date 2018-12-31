@@ -1,2 +1,6 @@
+alias cat='bat'
 alias mkdir='mkdir -p'
+alias ping='prettyping --nolegend'
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias top='htop'
 

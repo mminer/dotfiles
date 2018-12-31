@@ -1,17 +1,21 @@
 #!/usr/bin/env bash
 
 # CLI Programs
+brew install bat
 brew install carthage
-brew install ccat
 brew install cmake
 brew install diff-so-fancy
 brew install fzf
 brew install git
 brew install git-lfs
+brew install htop
 brew install httpie
 brew install lua
 brew install mackup
+brew install ncdu
+brew install noti
 brew install nvm
+brew install prettyping
 brew install python
 brew install python3
 brew install ripgrep

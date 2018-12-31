@@ -40,8 +40,11 @@ source $(brew --prefix nvm)/nvm.sh
 nvm install 8
 npm install --global svgo
 
+echo 'Installing Python packages.'
+pip3 install http-prompt
+
 echo 'Installing Ruby packages.'
-gem install jekyll jekyll-feed tmuxinator
+gem colorls install jekyll jekyll-feed tmuxinator
 
 echo 'Installing vim plugins.'
 vim +PlugInstall +qall
