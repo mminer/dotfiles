@@ -23,7 +23,6 @@ plugins=(
     jsontools
     npm
     npx
-    nvm
     osx
     pip
     python
@@ -48,6 +47,11 @@ unsetopt correct_all
 # Use same keys to switch to command mode as vim.
 # https://superuser.com/a/353127
 bindkey -M viins 'jj' vi-cmd-mode
+
+# Set up nvm.
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"
 
 # Reopen suspended session using ctrl-z (same command used to suspend it).
 foreground() { fg }

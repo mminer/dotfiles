@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
+brew update
+brew upgrade
+
 # CLI Programs
 brew install bat
-brew install carthage
-brew install cmake
 brew install diff-so-fancy
 brew install fzf
 brew install git
@@ -37,33 +38,5 @@ brew cask install qlmarkdown
 brew cask install qlstephen
 brew cask install quicklook-csv
 brew cask install quicklook-json
-
-# GUI Programs
-brew cask install 1password
-brew cask install dash
-brew cask install docker
-brew cask install dropbox
-brew cask install google-chrome
-brew cask install hammerspoon
-brew cask install hazel
-brew cask install iina
-brew cask install imageoptim
-brew cask install iterm2
-brew cask install kaleidoscope
-brew cask install keyboard-maestro
-brew cask install launchbar
-brew cask install little-snitch
-brew cask install monodraw
-brew cask install openemu
-brew cask install paw
-brew cask install sketch
-brew cask install skype
-brew cask install steam
-brew cask install tiled
-brew cask install transmission
-brew cask install transmit
-brew cask install unity
-brew cask install vmware-fusion
-brew cask install wwdc
 
 brew cleanup

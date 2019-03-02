@@ -37,11 +37,11 @@ brew tap caskroom/cask
 echo 'Installing Node and npm packages.'
 export NVM_DIR=${HOME}/.nvm
 source $(brew --prefix nvm)/nvm.sh
-nvm install 8
-npm install --global svgo
+nvm install 11
+npm install --global svgo wscat
 
 echo 'Installing Python packages.'
-pip3 install http-prompt
+pip3 install aws aws-shell http-prompt
 
 echo 'Installing Ruby packages.'
 gem colorls install jekyll jekyll-feed tmuxinator
