@@ -22,7 +22,6 @@ ln -s ${PWD}/.ssh/config ~/.ssh/config
 ln -s ${PWD}/.tmux ~/.tmux
 ln -s ${PWD}/.tmux.conf ~/.tmux.conf
 ln -s ${PWD}/.tmuxinator ~/.tmuxinator
-ln -s ${PWD}/.vim ~/.vim
 ln -s ${PWD}/.vimrc ~/.vimrc
 ln -s ${PWD}/.zsh ~/.zsh
 ln -s ${PWD}/.zshrc ~/.zshrc
@@ -48,7 +47,6 @@ gem colorls install jekyll jekyll-feed tmuxinator
 
 echo 'Installing vim plugins.'
 vim +PlugInstall +qall
-(cd ~/.vim/bundle/omnisharp-vim/server && xbuild)
 
 echo 'Installing key bindings for fuzzy finder.'
 $(brew --prefix)/opt/fzf/install --completion --key-bindings --no-update-rc \
