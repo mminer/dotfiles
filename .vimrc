@@ -104,6 +104,7 @@ Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
+Plug 'prettier/vim-prettier'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'ervandew/supertab'
@@ -120,7 +121,6 @@ set rtp+=~/.fzf             " If installed using Git
 let g:airline_powerline_fonts = 1
 let g:airline_section_b = ''
 let g:airline_section_y = ''
-let g:airline_section_z = airline#section#create(['%3p%% ', 'linenr', 'maxlinenr'])
 let g:airline_symbols = get(g:,'airline_symbols',{})
 let g:airline_symbols.maxlinenr = ''
 let g:airline_theme = 'molokai'
