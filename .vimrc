@@ -29,10 +29,6 @@ set textwidth=80
 set wildignore+=*.o,*.obj,.git,*.pyc,*.class,*.unity,.*,venv,*.meta,*.pdf,*.prefab,*.psd,*.fbx,*.mat,node_modules,bower_components
 set wildmode=list:longest,full
 
-" Remove trailing whitespace on save.
-" http://vim.wikia.com/wiki/Remove_unwanted_spaces#Automatically_removing_all_trailing_whitespace
-autocmd BufWritePre * %s/\s\+$//e
-
 
 " Key Bindings:
 
@@ -60,8 +56,11 @@ noremap <leader>- :split<cr>
 noremap <leader>= :vsplit<cr>
 
 noremap <leader>; :Buffers<cr>
+noremap <leader>b :ALEGoToDefinition<cr>
+noremap <leader>c :ALEComplete<cr>
 noremap <leader>m :marks<cr>
 noremap <leader>n :NERDTreeToggle<cr>
+noremap <leader>p :ALEFix<cr>
 noremap <leader>t :Files<cr>
 noremap <leader>u :UndotreeToggle<cr>
 noremap <leader>w :set wrap!<cr>
@@ -72,6 +71,8 @@ noremap <leader>i :set list!<cr>
 " Clear search highlights.
 noremap <leader><leader><leader> :noh<cr>
 
+" Allow typing lowercase rg to trigger Ripgrep search.
+cnoreabbrev rg Rg
 
 " Custom Commands:
 
@@ -104,7 +105,6 @@ Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
-Plug 'prettier/vim-prettier'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'ervandew/supertab'
@@ -124,7 +124,13 @@ let g:airline_section_y = ''
 let g:airline_symbols = get(g:,'airline_symbols',{})
 let g:airline_symbols.maxlinenr = ''
 let g:airline_theme = 'molokai'
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['prettier'],
+\}
 let g:ale_linters = { 'cs': [], 'html': [], 'swift': [] }
+let g:ale_linters_ignore = ['tsserver']
 let g:jsx_ext_required = 0
 let g:SuperTabDefaultCompletionType = 'context'
 
