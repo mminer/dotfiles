@@ -75,6 +75,10 @@ noremap <leader><leader><leader> :noh<cr>
 " Allow typing lowercase rg to trigger Ripgrep search.
 cnoreabbrev rg Rg
 
+" Navigate between ALE errors.
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
 " Custom Commands:
 
 com! FormatJSON %!python -m json.tool
@@ -136,6 +140,16 @@ let g:ale_linters = { 'cs': [], 'html': [], 'swift': [] }
 let g:ale_linters_ignore = ['tsserver']
 let g:jsx_ext_required = 0
 let g:SuperTabDefaultCompletionType = 'context'
+
+let g:cursormode_color_map = {
+\   'nlight': '#000000',
+\   'ndark': '#BBBBBB',
+\   'i': g:airline#themes#{g:airline_theme}#palette.insert.airline_a[1],
+\   'R': g:airline#themes#{g:airline_theme}#palette.replace.airline_a[1],
+\   'v': g:airline#themes#{g:airline_theme}#palette.visual.airline_a[1],
+\   'V': g:airline#themes#{g:airline_theme}#palette.visual.airline_a[1],
+\   '\<C-V>': g:airline#themes#{g:airline_theme}#palette.visual.airline_a[1],
+\}
 
 
 " Colours:
