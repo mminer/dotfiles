@@ -26,6 +26,7 @@ set showmatch
 set smartcase
 set softtabstop=-1
 set textwidth=80
+set updatetime=100 " Recommended by vim-gitgutter
 set wildignore+=*.o,*.obj,.git,*.pyc,*.class,*.unity,.*,venv,*.meta,*.pdf,*.prefab,*.psd,*.fbx,*.mat,node_modules,bower_components
 set wildmode=list:longest,full
 
@@ -101,6 +102,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-gitgutter'
 Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -118,6 +120,7 @@ call plug#end()
 set rtp+=/usr/local/opt/fzf " If installed using Homebrew
 set rtp+=~/.fzf             " If installed using Git
 
+let g:airline#extensions#cursormode#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_section_b = ''
 let g:airline_section_y = ''

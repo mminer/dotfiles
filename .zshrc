@@ -17,6 +17,7 @@ plugins=(
     docker
     docker-compose
     encode64
+    fasd
     git
     history
     httpie
@@ -30,7 +31,6 @@ plugins=(
     tmux
     vi-mode
     xcode
-    z
     zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting
