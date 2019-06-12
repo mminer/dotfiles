@@ -59,9 +59,11 @@ noremap <leader>= :vsplit<cr>
 noremap <leader>; :Buffers<cr>
 noremap <leader>b :ALEGoToDefinition<cr>
 noremap <leader>c :ALEComplete<cr>
+noremap <leader>g :GitGutterFold<cr>
 noremap <leader>m :marks<cr>
 noremap <leader>n :NERDTreeToggle<cr>
 noremap <leader>p :ALEFix<cr>
+noremap <leader>r :ALEFindReferences<cr>
 noremap <leader>t :Files<cr>
 noremap <leader>u :UndotreeToggle<cr>
 noremap <leader>w :set wrap!<cr>

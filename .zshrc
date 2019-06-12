@@ -19,6 +19,7 @@ plugins=(
     encode64
     fasd
     git
+    gpg-agent
     history
     httpie
     jsontools

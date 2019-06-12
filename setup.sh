@@ -59,6 +59,12 @@ chsh -s $(brew --prefix)/bin/zsh
 echo 'Configuring macOS.'
 ./macos.sh
 
+echo 'Doing additional configuration.'
+
+# https://stackoverflow.com/a/40066889
+echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+killall gpg-agent
+
 echo 'Restoring mackup settings.'
 read -p "Sign into Dropbox and wait for syncing to complete before hitting enter." -n1 -s
 mackup restore
