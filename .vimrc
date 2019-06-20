@@ -57,12 +57,11 @@ noremap <leader>- :split<cr>
 noremap <leader>= :vsplit<cr>
 
 noremap <leader>; :Buffers<cr>
-noremap <leader>b :ALEGoToDefinition<cr>
-noremap <leader>c :ALEComplete<cr>
+noremap <leader>d :ALEGoToDefinition<cr>
 noremap <leader>g :GitGutterFold<cr>
+noremap <leader>h :ALEHover<cr>
 noremap <leader>m :marks<cr>
 noremap <leader>n :NERDTreeToggle<cr>
-noremap <leader>p :ALEFix<cr>
 noremap <leader>r :ALEFindReferences<cr>
 noremap <leader>t :Files<cr>
 noremap <leader>u :UndotreeToggle<cr>
@@ -77,7 +76,8 @@ noremap <leader><leader><leader> :noh<cr>
 " Allow typing lowercase rg to trigger Ripgrep search.
 cnoreabbrev rg Rg
 
-" Navigate between ALE errors.
+" Navigate between ALE errors using control+j and control+k.
+" https://github.com/w0rp/ale#5ix-how-can-i-navigate-between-errors-quickly
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
@@ -126,10 +126,12 @@ call plug#end()
 set rtp+=/usr/local/opt/fzf " If installed using Homebrew
 set rtp+=~/.fzf             " If installed using Git
 
+let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#cursormode#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_section_b = ''
 let g:airline_section_y = ''
+let g:airline_skip_empty_sections = 1
 let g:airline_symbols = get(g:,'airline_symbols',{})
 let g:airline_symbols.maxlinenr = ''
 let g:airline_theme = 'molokai'
@@ -137,9 +139,10 @@ let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier'],
+\   'typescript': ['prettier'],
 \}
 let g:ale_linters = { 'cs': [], 'html': [], 'swift': [] }
-let g:ale_linters_ignore = ['tsserver']
+let g:ale_linters_ignore = {'javascript': ['tslint', 'tsserver']}
 let g:jsx_ext_required = 0
 let g:SuperTabDefaultCompletionType = 'context'
 
@@ -152,6 +155,8 @@ let g:cursormode_color_map = {
 \   'V': g:airline#themes#{g:airline_theme}#palette.visual.airline_a[1],
 \   '\<C-V>': g:airline#themes#{g:airline_theme}#palette.visual.airline_a[1],
 \}
+
+set omnifunc=ale#completion#OmniFunc
 
 
 " Colours:

@@ -28,7 +28,7 @@ brew install tmux
 brew install tmuxinator-completion
 brew install tldr
 brew install tree
-brew install vim --with-override-system-vi
+brew install vim
 brew install youtube-dl
 brew install zsh
 
