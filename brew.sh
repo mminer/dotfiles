@@ -12,7 +12,6 @@ brew install git-lfs
 brew install htop
 brew install httpie
 brew install lua
-brew install mackup
 brew install ncdu
 brew install noti
 brew install nvm
