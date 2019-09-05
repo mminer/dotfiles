@@ -135,13 +135,19 @@ let g:airline_skip_empty_sections = 1
 let g:airline_symbols = get(g:,'airline_symbols',{})
 let g:airline_symbols.maxlinenr = ''
 let g:airline_theme = 'molokai'
+let g:ale_cpp_clang_options = '-Wall -std=c++17'
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier'],
 \   'typescript': ['prettier'],
 \}
-let g:ale_linters = { 'cs': [], 'html': [], 'swift': [] }
+let g:ale_linters = { 
+\   'cpp': ['ccls', 'clang', 'clangcheck', 'clangd', 'clangtidy', 'clazy', 'cppcheck', 'cpplint', 'cquery', 'flawfinder'], 
+\   'cs': [], 
+\   'html': [], 
+\   'swift': [],
+\}
 let g:ale_linters_ignore = {'javascript': ['tslint', 'tsserver']}
 let g:jsx_ext_required = 0
 let g:SuperTabDefaultCompletionType = 'context'

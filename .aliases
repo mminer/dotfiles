@@ -1,4 +1,5 @@
 alias cat='bat'
+alias devlog='vim ~/Code/devlog/$(date +"%Y-%m-%d").md'
 alias mkdir='mkdir -p'
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
