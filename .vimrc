@@ -170,3 +170,11 @@ set omnifunc=ale#completion#OmniFunc
 colorscheme molokai
 autocmd ColorScheme * highlight Normal ctermbg=none ctermfg=white
 set background=dark
+
+
+" File Types:
+
+augroup twig_ft
+  au!
+  autocmd BufNewFile,BufRead *.js.flow   set syntax=javascript
+augroup END

@@ -4,3 +4,4 @@ noremap <leader>i :action EditorToggleShowWhitespaces<cr>
 noremap <leader>n :action ActivateProjectToolWindow<cr>
 noremap <leader>t :action SearchEverywhere<cr>
 noremap <leader>w :action EditorToggleUseSoftWraps<cr>
+set ideajoin
