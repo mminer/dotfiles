@@ -25,3 +25,4 @@ export ZSH_THEME='miner'
 
 # Configure tmux.
 export ZSH_TMUX_AUTOSTART=true
+export ZSH_TMUX_ITERM2=true

@@ -58,3 +58,5 @@ export NVM_DIR="$HOME/.nvm"
 foreground() { fg }
 zle -N foreground
 bindkey '^Z' foreground
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
