@@ -148,7 +148,10 @@ let g:ale_linters = {
 \   'html': [], 
 \   'swift': [],
 \}
-let g:ale_linters_ignore = {'javascript': ['tslint', 'tsserver']}
+let g:ale_linters_ignore = {
+\   'javascript': ['tslint', 'tsserver'],
+\   'javascriptreact': ['tslint', 'tsserver'],
+\}
 let g:jsx_ext_required = 0
 let g:SuperTabDefaultCompletionType = 'context'
 
