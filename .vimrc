@@ -47,39 +47,41 @@ noremap Q gq
 noremap Y y$
 
 " Move between tabs and split windows using arrow keys.
-noremap <up>    <C-w>k
-noremap <down>  <C-w>j
-noremap <left>  <C-w>h
-noremap <right> <C-w>l
+nmap <up>    <C-w>k
+nmap <down>  <C-w>j
+nmap <left>  <C-w>h
+nmap <right> <C-w>l
 
 " Create new split windows easier.
-noremap <leader>- :split<cr>
-noremap <leader>= :vsplit<cr>
+nmap <silent> <leader>- :split<cr>
+nmap <silent> <leader>= :vsplit<cr>
 
-noremap <leader>; :Buffers<cr>
-noremap <leader>d :ALEGoToDefinition<cr>
-noremap <leader>g :GitGutterFold<cr>
-noremap <leader>h :ALEHover<cr>
-noremap <leader>m :marks<cr>
-noremap <leader>n :NERDTreeToggle<cr>
-noremap <leader>r :ALEFindReferences<cr>
-noremap <leader>t :Files<cr>
-noremap <leader>u :UndotreeToggle<cr>
-noremap <leader>w :set wrap!<cr>
+nmap <leader>; :Buffers<cr>
+nmap <leader>? :ALEHover<cr>
+nmap <leader>d :ALEGoToDefinition<cr>
+nmap <leader>g :GitGutterFold<cr>
+nmap <leader>m :marks<cr>
+nmap <leader>n :NERDTreeToggle<cr>
+nmap <leader>r :ALEFindReferences<cr>
+nmap <leader>s <Plug>DashSearch
+nmap <leader>t :Files<cr>
+nmap <leader>u :UndotreeToggle<cr>
+nmap <leader>w :set wrap!<cr>
 
 " Toggle invisible characters.
-noremap <leader>i :set list!<cr>
+nmap <silent> <leader>i :set list!<cr>
 
 " Clear search highlights.
-noremap <leader><leader><leader> :noh<cr>
-
-" Allow typing lowercase rg to trigger Ripgrep search.
-cnoreabbrev rg Rg
+nmap <silent> <leader><leader><leader> :noh<cr>
 
 " Navigate between ALE errors using control+j and control+k.
 " https://github.com/w0rp/ale#5ix-how-can-i-navigate-between-errors-quickly
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" Allow typing lowercase rg to trigger Ripgrep search.
+cnoreabbrev rg Rg
+
 
 " Custom Commands:
 
@@ -102,6 +104,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 Plug 'takac/vim-commandcaps'
+Plug 'rizzatti/dash.vim'
 Plug 'tpope/vim-dispatch'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
@@ -142,19 +145,23 @@ let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   'typescript': ['prettier'],
 \}
-let g:ale_linters = { 
-\   'cpp': ['ccls', 'clang', 'clangcheck', 'clangd', 'clangtidy', 'clazy', 'cppcheck', 'cpplint', 'cquery', 'flawfinder'], 
-\   'cs': [], 
-\   'html': [], 
+let g:ale_linters = {
+\   'cpp': ['ccls', 'clang', 'clangcheck', 'clangd', 'clangtidy', 'clazy', 'cppcheck', 'cpplint', 'cquery', 'flawfinder'],
+\   'cs': [],
+\   'html': [],
 \   'swift': [],
 \}
 let g:ale_linters_ignore = {
 \   'javascript': ['tslint', 'tsserver'],
 \   'javascriptreact': ['tslint', 'tsserver'],
 \}
+let g:dash_map = {
+\   'javascriptreact': ['javascript', 'react'],
+\   'typescript': ['javascript', 'typescript'],
+\   'typescript.tsx': ['javascript', 'react', 'typescript'],
+\}
 let g:jsx_ext_required = 0
 let g:SuperTabDefaultCompletionType = 'context'
-
 let g:cursormode_color_map = {
 \   'nlight': '#000000',
 \   'ndark': '#BBBBBB',
