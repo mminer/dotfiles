@@ -3,6 +3,8 @@ set nocompatible
 
 " General:
 
+set ballooneval
+set balloonevalterm
 set clipboard=unnamed
 set colorcolumn=+1
 set cursorline
@@ -26,6 +28,7 @@ set showmatch
 set smartcase
 set softtabstop=-1
 set textwidth=80
+set ttymouse=sgr
 set updatetime=100 " Recommended by vim-gitgutter
 set wildignore+=*.o,*.obj,.git,*.pyc,*.class,*.unity,.*,venv,*.meta,*.pdf,*.prefab,*.psd,*.fbx,*.mat,node_modules,bower_components
 set wildmode=list:longest,full
@@ -97,6 +100,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
+let g:ale_set_balloons = 1
 
 call plug#begin('~/.vim/plugged')
 
