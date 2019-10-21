@@ -60,7 +60,7 @@ nmap <silent> <leader>- :split<cr>
 nmap <silent> <leader>= :vsplit<cr>
 
 nmap <leader>; :Buffers<cr>
-nmap <leader>? :ALEHover<cr>
+nmap <leader>/ :ALEHover<cr>
 nmap <leader>d :ALEGoToDefinition<cr>
 nmap <leader>g :GitGutterFold<cr>
 nmap <leader>m :marks<cr>
