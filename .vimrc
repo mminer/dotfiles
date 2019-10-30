@@ -126,6 +126,7 @@ Plug 'tpope/vim-sensible'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
+Plug 'wincent/terminus'
 Plug 'mbbill/undotree'
 
 call plug#end()
