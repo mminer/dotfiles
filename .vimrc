@@ -150,6 +150,7 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier'],
 \   'typescript': ['prettier'],
+\   'typescriptreact': ['prettier'],
 \}
 let g:ale_linters = {
 \   'cpp': ['ccls', 'clang', 'clangcheck', 'clangd', 'clangtidy', 'clazy', 'cppcheck', 'cpplint', 'cquery', 'flawfinder'],
@@ -164,7 +165,7 @@ let g:ale_linters_ignore = {
 let g:dash_map = {
 \   'javascriptreact': ['javascript', 'react'],
 \   'typescript': ['javascript', 'typescript'],
-\   'typescript.tsx': ['javascript', 'react', 'typescript'],
+\   'typescriptreact': ['javascript', 'react', 'typescript'],
 \}
 let g:jsx_ext_required = 0
 let g:SuperTabDefaultCompletionType = 'context'
