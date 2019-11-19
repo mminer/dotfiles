@@ -119,9 +119,7 @@ Plug 'rizzatti/dash.vim'
 Plug 'tpope/vim-dispatch'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf.vim'
-Plug 'airblade/vim-gitgutter'
 Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -141,6 +139,11 @@ Plug 'tpope/vim-eunuch'
 
 " Enables mouse support and shows thin cursor in insert mode.
 Plug 'wincent/terminus'
+
+" Integrate with Git. Rhubarb enables fugutive.vim's :Gbrowse for GitHub.
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-rhubarb'
 
 call plug#end()
 
@@ -181,6 +184,8 @@ let g:dash_map = {
 \   'typescriptreact': ['javascript', 'react', 'typescript'],
 \}
 let g:jsx_ext_required = 0
+let g:NERDDefaultAlign = 'left'
+let g:NERDSpaceDelims = 1
 let g:SuperTabDefaultCompletionType = 'context'
 let g:cursormode_color_map = {
 \   'nlight': '#000000',
