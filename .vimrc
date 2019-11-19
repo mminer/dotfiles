@@ -3,13 +3,10 @@ set nocompatible
 
 " General:
 
-set ballooneval
-set balloonevalterm
 set clipboard=unnamed
 set colorcolumn=+1
 set cursorline
 set expandtab
-set fillchars+=vert:│ " https://vi.stackexchange.com/a/2942
 set foldlevel=99
 set foldmethod=indent
 set formatoptions=cqn
@@ -17,7 +14,6 @@ set hidden
 set hlsearch
 set ignorecase
 set listchars=tab:▸\ ,eol:¬
-set mouse=a
 set nofoldenable
 set noshowmode
 set noswapfile
@@ -28,10 +24,20 @@ set showmatch
 set smartcase
 set softtabstop=-1
 set textwidth=80
-set ttymouse=sgr
-set updatetime=100 " Recommended by vim-gitgutter
 set wildignore+=*.o,*.obj,.git,*.pyc,*.class,*.unity,.*,venv,*.meta,*.pdf,*.prefab,*.psd,*.fbx,*.mat,node_modules,bower_components
 set wildmode=list:longest,full
+
+" Enable dynamic popovers. Used by ALE to display type info on mouse hover.
+set ballooneval
+set balloonevalterm
+
+" Use full-height dividers for split windows.
+" https://vi.stackexchange.com/a/2942
+set fillchars+=vert:│
+
+" Recommended by vim-gitgutter to show signs faster.
+" https://github.com/airblade/vim-gitgutter#when-signs-take-a-few-seconds-to-appear
+set updatetime=100
 
 
 " Key Bindings:
@@ -101,6 +107,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" Has to be set before ALE loads.
 let g:ale_set_balloons = 1
 
 call plug#begin('~/.vim/plugged')
@@ -108,12 +115,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
-Plug 'takac/vim-commandcaps'
 Plug 'rizzatti/dash.vim'
 Plug 'tpope/vim-dispatch'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf.vim'
 Plug 'airblade/vim-gitgutter'
@@ -126,8 +131,16 @@ Plug 'tpope/vim-sensible'
 Plug 'ervandew/supertab'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
-Plug 'wincent/terminus'
 Plug 'mbbill/undotree'
+
+" Fixes mistyped capitalized commands. :W becomes :w, :Q becomes :q, and so on.
+Plug 'takac/vim-commandcaps'
+
+" Commands for common file operations: Delete, Rename, Move, etc.
+Plug 'tpope/vim-eunuch'
+
+" Enables mouse support and shows thin cursor in insert mode.
+Plug 'wincent/terminus'
 
 call plug#end()
 
