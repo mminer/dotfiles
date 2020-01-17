@@ -114,13 +114,13 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
+Plug 'tpope/vim-commentary'
 Plug 'rizzatti/dash.vim'
 Plug 'tpope/vim-dispatch'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf.vim'
 Plug 'tomasr/molokai'
-Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-repeat'
@@ -143,6 +143,11 @@ Plug 'wincent/terminus'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rhubarb'
+
+" Enable text objects ae and ie to select content of entire buffer.
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-user'
+
 
 call plug#end()
 
