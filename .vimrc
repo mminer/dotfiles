@@ -74,10 +74,6 @@ nmap <leader>r :ALEFindReferences<cr>
 nmap <leader>s <Plug>DashSearch
 nmap <leader>t :Files<cr>
 nmap <leader>u :UndotreeToggle<cr>
-nmap <leader>w :set wrap!<cr>
-
-" Toggle invisible characters.
-nmap <silent> <leader>i :set list!<cr>
 
 " Clear search highlights.
 nmap <silent> <leader><leader><leader> :noh<cr>
@@ -129,6 +125,7 @@ Plug 'ervandew/supertab'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 Plug 'mbbill/undotree'
+Plug 'tpope/vim-unimpaired'
 
 " Fixes mistyped capitalized commands. :W becomes :w, :Q becomes :q, and so on.
 Plug 'takac/vim-commandcaps'
