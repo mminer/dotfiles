@@ -118,6 +118,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf.vim'
 Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree'
+Plug 'OmniSharp/omnisharp-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
@@ -172,7 +173,7 @@ let g:ale_fixers = {
 \}
 let g:ale_linters = {
 \   'cpp': ['ccls', 'clang', 'clangcheck', 'clangd', 'clangtidy', 'clazy', 'cppcheck', 'cpplint', 'cquery', 'flawfinder'],
-\   'cs': [],
+\   'cs': ['OmniSharp'],
 \   'html': [],
 \   'swift': [],
 \}
@@ -188,6 +189,7 @@ let g:dash_map = {
 let g:jsx_ext_required = 0
 let g:NERDDefaultAlign = 'left'
 let g:NERDSpaceDelims = 1
+let g:OmniSharp_server_stdio = 1
 let g:SuperTabDefaultCompletionType = 'context'
 let g:cursormode_color_map = {
 \   'nlight': '#000000',
