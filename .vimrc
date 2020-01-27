@@ -69,7 +69,6 @@ nmap <leader>/ :ALEHover<cr>
 nmap <leader>d :ALEGoToDefinition<cr>
 nmap <leader>g :GitGutterFold<cr>
 nmap <leader>m :marks<cr>
-nmap <leader>n :NERDTreeToggle<cr>
 nmap <leader>r :ALEFindReferences<cr>
 nmap <leader>s <Plug>DashSearch
 nmap <leader>t :Files<cr>
@@ -85,6 +84,9 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " Allow typing lowercase rg to trigger Ripgrep search.
 cnoreabbrev rg Rg
+
+" Automatically expand path of active buffer with %% (from Practical Vim).
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 
 " Custom Commands:
@@ -117,7 +119,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf.vim'
 Plug 'tomasr/molokai'
-Plug 'scrooloose/nerdtree'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-repeat'
