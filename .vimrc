@@ -75,7 +75,7 @@ nmap <leader>t :Files<cr>
 nmap <leader>u :UndotreeToggle<cr>
 
 " Clear search highlights.
-nmap <silent> <leader><leader><leader> :noh<cr>
+nmap <leader><leader><leader> :nohlsearch<cr>
 
 " Navigate between ALE errors using control+j and control+k.
 " https://github.com/w0rp/ale#5ix-how-can-i-navigate-between-errors-quickly
@@ -85,8 +85,13 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " Allow typing lowercase rg to trigger Ripgrep search.
 cnoreabbrev rg Rg
 
-" Automatically expand path of active buffer with %% (from Practical Vim).
+" Automatically expand path of active buffer with %%.
+" From Practical Vim, tip 42.
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+" Automatically reuse last flags when repeating substitution via :&.
+" From Practical Vim, tip 93.
+nnoremap & :&&<CR> xnoremap & :&&<CR>
 
 
 " Custom Commands:
@@ -128,6 +133,7 @@ Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-unimpaired'
+Plug 'nelstrom/vim-visual-star-search'
 
 " Fixes mistyped capitalized commands. :W becomes :w, :Q becomes :q, and so on.
 Plug 'takac/vim-commandcaps'
