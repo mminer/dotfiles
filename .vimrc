@@ -12,6 +12,7 @@ set formatoptions=cqn
 set hidden
 set hlsearch
 set ignorecase
+set infercase
 set listchars=tab:▸\ ,eol:¬
 set nofoldenable
 set noshowmode
@@ -34,6 +35,10 @@ set balloonevalterm
 " https://vi.stackexchange.com/a/2942
 set fillchars+=vert:│
 
+" Use ripgrep for search.
+" https://github.com/BurntSushi/ripgrep/issues/425#issuecomment-381446152
+set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+
 " Recommended by vim-gitgutter to show signs faster.
 " https://github.com/airblade/vim-gitgutter#when-signs-take-a-few-seconds-to-appear
 set updatetime=100
@@ -43,13 +48,6 @@ set updatetime=100
 
 let mapleader = " "
 inoremap jj <Esc>
-
-" Move file screen line rather than file line.
-noremap j gj
-noremap k gk
-
-" Disable going to ex mode.
-noremap Q gq
 
 " Yank from cursor to end of line, to be consistent with C and D.
 noremap Y y$
@@ -72,7 +70,6 @@ nmap <leader>m :marks<cr>
 nmap <leader>r :ALEFindReferences<cr>
 nmap <leader>s <Plug>DashSearch
 nmap <leader>t :Files<cr>
-nmap <leader>u :UndotreeToggle<cr>
 
 " Clear search highlights.
 nmap <leader><leader><leader> :nohlsearch<cr>
@@ -81,9 +78,6 @@ nmap <leader><leader><leader> :nohlsearch<cr>
 " https://github.com/w0rp/ale#5ix-how-can-i-navigate-between-errors-quickly
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-
-" Allow typing lowercase rg to trigger Ripgrep search.
-cnoreabbrev rg Rg
 
 " Automatically expand path of active buffer with %%.
 " From Practical Vim, tip 42.
@@ -114,6 +108,7 @@ let g:ale_set_balloons = 1
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'tpope/vim-abolish'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
@@ -128,10 +123,7 @@ Plug 'OmniSharp/omnisharp-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
-Plug 'ervandew/supertab'
 Plug 'tpope/vim-surround'
-Plug 'godlygeek/tabular'
-Plug 'mbbill/undotree'
 Plug 'tpope/vim-unimpaired'
 Plug 'nelstrom/vim-visual-star-search'
 
@@ -148,10 +140,6 @@ Plug 'wincent/terminus'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rhubarb'
-
-" Enable text objects ae and ie to select content of entire buffer.
-Plug 'kana/vim-textobj-entire'
-Plug 'kana/vim-textobj-user'
 
 
 call plug#end()
@@ -194,8 +182,6 @@ let g:dash_map = {
 \   'typescriptreact': ['javascript', 'react', 'typescript'],
 \}
 let g:jsx_ext_required = 0
-let g:NERDDefaultAlign = 'left'
-let g:NERDSpaceDelims = 1
 let g:OmniSharp_server_stdio = 1
 let g:SuperTabDefaultCompletionType = 'context'
 let g:cursormode_color_map = {
