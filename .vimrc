@@ -8,6 +8,7 @@ set cursorline
 set expandtab
 set foldlevel=99
 set foldmethod=indent
+set foldopen=""
 set formatoptions=cqn
 set hidden
 set hlsearch
@@ -48,6 +49,10 @@ set updatetime=100
 
 let mapleader = " "
 inoremap jj <Esc>
+
+" Move file screen line rather than file line.
+noremap j gj
+noremap k gk
 
 " Yank from cursor to end of line, to be consistent with C and D.
 noremap Y y$
