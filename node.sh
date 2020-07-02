@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-# Install NVM and latest Node LTS release.
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+cd ~/.nvm
+git checkout v0.35.3
+source ~/.zshrc
+
 nvm install --lts
 
 npm install --global \
