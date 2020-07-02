@@ -1,9 +1,4 @@
 source ${HOME}/.aliases
-
-if grep -qE "(Microsoft|WSL)" /proc/version &> /dev/null; then
-    source ${HOME}/.aliases-wsl
-fi
-
 source ${HOME}/.exports
 
 # Add custom scripts to path.

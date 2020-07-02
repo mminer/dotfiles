@@ -4,3 +4,7 @@ alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias top='htop'
 
+if grep -qE "(Microsoft|WSL)" /proc/version &> /dev/null; then
+    alias open='cmd.exe /C start'
+    alias taskkill='taskkill.exe /F /IM'
+fi

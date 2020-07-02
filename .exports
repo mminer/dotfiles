@@ -11,9 +11,6 @@ export FZF_CTRL_T_COMMAND="${FZF_DEFAULT_COMMAND}"
 # Opt out of Homebrew analytics.
 export HOMEBREW_NO_ANALYTICS=1
 
-# Specify NVM directory.
-export NVM_DIR=${HOME}/.nvm
-
 # Specify default options for ripgrep via config file.
 export RIPGREP_CONFIG_PATH=${HOME}/.ripgreprc
 
