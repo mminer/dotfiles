@@ -14,7 +14,6 @@ brew install httpie
 brew install lua
 brew install ncdu
 brew install noti
-brew install nvm
 brew install pinentry-mac # https://stackoverflow.com/a/40066889
 brew install prettyping
 brew install python

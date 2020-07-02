@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo 'Creating expected folders.'
-mkdir ~/.nvm ~/.ssh
+mkdir ~/.ssh
 
 echo 'Pulling git submodules.'
 git submodule init
@@ -32,9 +32,10 @@ brew tap caskroom/cask
 ./brew.sh
 
 echo 'Installing Node and npm packages.'
-export NVM_DIR=${HOME}/.nvm
-source $(brew --prefix nvm)/nvm.sh
-nvm install 11
+# Installing nvm via brew is unsupported.
+# https://github.com/nvm-sh/nvm#important-notes
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+nvm install --lts
 npm install --global svgo wscat
 
 echo 'Installing Python packages.'
