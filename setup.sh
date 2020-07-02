@@ -20,7 +20,6 @@ ln -s ${PWD}/.ripgreprc ~/.ripgreprc
 ln -s ${PWD}/.ssh/config ~/.ssh/config
 ln -s ${PWD}/.tmux ~/.tmux
 ln -s ${PWD}/.tmux.conf ~/.tmux.conf
-ln -s ${PWD}/.tmuxinator ~/.tmuxinator
 ln -s ${PWD}/.vimrc ~/.vimrc
 ln -s ${PWD}/.zsh ~/.zsh
 ln -s ${PWD}/.zshrc ~/.zshrc
@@ -42,7 +41,7 @@ echo 'Installing Python packages.'
 pip3 install aws aws-shell http-prompt
 
 echo 'Installing Ruby packages.'
-gem colorls install jekyll jekyll-feed tmuxinator
+gem colorls install jekyll jekyll-feed
 
 echo 'Installing vim plugins.'
 vim +PlugInstall +qall

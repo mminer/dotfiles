@@ -24,7 +24,6 @@ brew install ruby
 brew install swiftlint
 brew install switchaudio-osx
 brew install tmux
-brew install tmuxinator-completion
 brew install tldr
 brew install tree
 brew install vim
