@@ -32,11 +32,7 @@ brew tap caskroom/cask
 ./brew.sh
 
 echo 'Installing Node and npm packages.'
-# Installing nvm via brew is unsupported.
-# https://github.com/nvm-sh/nvm#important-notes
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
-nvm install --lts
-npm install --global svgo wscat
+./node.sh
 
 echo 'Installing Python packages.'
 pip3 install aws aws-shell http-prompt

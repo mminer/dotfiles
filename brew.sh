@@ -5,7 +5,6 @@ brew upgrade
 
 # CLI Programs
 brew install bat
-brew install diff-so-fancy
 brew install fzf
 brew install git
 brew install git-lfs
