@@ -1,7 +1,5 @@
 alias cat='bat'
-alias devlog='vim ~/Code/devlog/$(date +"%Y-%m-%d").md'
 alias mkdir='mkdir -p'
-alias notes='cd ~/Dropbox/Notes && vim -c "NERDTreeToggle"'
 alias ping='prettyping --nolegend'
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias top='htop'
