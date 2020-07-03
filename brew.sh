@@ -10,6 +10,7 @@ brew install \
     fzf \
     git \
     git-lfs \
+    github/gh/gh \
     htop \
     httpie \
     lua \
