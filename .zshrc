@@ -2,7 +2,8 @@ source ${HOME}/.aliases
 source ${HOME}/.exports
 
 # Add custom scripts to path.
-export PATH=${HOME}/bin:${PATH}
+path+=(${HOME}/bin)
+path+=(${HOME}/bin/diff-so-fancy)
 
 plugins=(
     colored-man-pages
@@ -25,18 +26,19 @@ plugins=(
     pip
     python
     redis-cli
+    ripgrep
     tmux
     vi-mode
     xcode
     zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting
+    # fzf's control-T shortcut conflicts with other plugins (zsh-autosuggestions, I believe).
+    # Loading it last allows it to take precedence.
+    fzf
 )
 
 source ${ZSH}/oh-my-zsh.sh
-
-# Enable fuzzy finder completion and key bindings.
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Turn off ZSH autocorrect.
 unsetopt correct_all

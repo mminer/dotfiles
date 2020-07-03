@@ -7,6 +7,5 @@ source ~/.zshrc
 nvm install --lts
 
 npm install --global \
-    diff-so-fancy \
     svgo \
     wscat
