@@ -20,6 +20,8 @@ export ZSH_CUSTOM=${HOME}/.zsh
 export ZSH_DISABLE_COMPFIX=true
 export ZSH_THEME='miner'
 
-# Configure tmux.
-export ZSH_TMUX_AUTOSTART=true
-export ZSH_TMUX_ITERM2=true
+# Configure tmux if we're using iTerm2.
+if [[ -n "$ITERM_SESSION_ID" ]]; then
+    export ZSH_TMUX_AUTOSTART=true
+    export ZSH_TMUX_ITERM2=true
+fi
