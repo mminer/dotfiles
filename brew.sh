@@ -2,6 +2,8 @@
 
 set -e
 
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
 brew update
 brew upgrade
 
@@ -28,6 +30,11 @@ brew install \
     vim \
     youtube-dl \
     zsh
+
+# Install key bindings for fzf.
+# https://github.com/junegunn/fzf#using-homebrew-or-linuxbrew
+$(brew --prefix)/opt/fzf/install --completion --key-bindings --no-update-rc \
+    --no-bash --no-fish
 
 brew cask install \
     betterzipql \

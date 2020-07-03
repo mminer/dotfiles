@@ -9,7 +9,6 @@ git submodule update
 
 echo 'Symlinking dotfiles.'
 ln -s ${PWD}/.aliases ~/.aliases
-ln -s ${PWD}/.aliases-wsl ~/.aliases-wsl
 ln -s ${PWD}/.exports ~/.exports
 ln -s ${PWD}/.gitconfig ~/.gitconfig
 ln -s ${PWD}/.gitignore ~/.gitignore
@@ -26,8 +25,6 @@ ln -s ${PWD}/bin ~/bin
 chflags -h hidden ~/bin
 
 echo 'Installing Homebrew and packages.'
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew tap caskroom/cask
 ./brew.sh
 
 echo 'Installing Node and npm packages.'
@@ -41,10 +38,6 @@ gem colorls install jekyll jekyll-feed
 
 echo 'Installing vim plugins.'
 vim +PlugInstall +qall
-
-echo 'Installing key bindings for fuzzy finder.'
-$(brew --prefix)/opt/fzf/install --completion --key-bindings --no-update-rc \
-    --no-bash --no-fish
 
 echo 'Changing default shell to ZSH.'
 echo $(brew --prefix)/bin/zsh | sudo tee -a /etc/shells
