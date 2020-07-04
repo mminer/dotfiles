@@ -2,7 +2,8 @@
 export DISABLE_UPDATE_PROMPT=true
 
 # Make vim the default editor.
-export EDITOR=$(brew --prefix)/bin/vim
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # Use ripgrep as source for fuzzy finder.
 export FZF_DEFAULT_COMMAND="rg --files"
