@@ -20,7 +20,6 @@ plugins=(
     httpie
     jsontools
     npm
-    npx
     nvm
     osx
     pip
