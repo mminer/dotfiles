@@ -1,10 +1,12 @@
-alias cat='bat'
-alias mkdir='mkdir -p'
-alias ping='prettyping --nolegend'
+alias cat="bat"
+alias mkdir="mkdir -p"
+alias ping="prettyping --nolegend"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
-alias top='htop'
+alias top="htop"
+alias yoink="open -a Yoink"
 
+# Windows WSL aliases.
 if [[ -n "$WSL_DISTRO_NAME" ]]; then
-    alias open='cmd.exe /C start'
-    alias taskkill='taskkill.exe /F /IM'
+    alias open="cmd.exe /C start"
+    alias taskkill="taskkill.exe /F /IM"
 fi
