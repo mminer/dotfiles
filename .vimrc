@@ -173,7 +173,6 @@ let g:ale_fixers = {
 let g:ale_linters = {
 \   'cpp': ['ccls', 'clang', 'clangcheck', 'clangd', 'clangtidy', 'clazy', 'cppcheck', 'cpplint', 'cquery', 'flawfinder'],
 \   'html': [],
-\   'swift': [],
 \}
 let g:ale_linters_ignore = {
 \   'javascript': ['tslint', 'tsserver'],
