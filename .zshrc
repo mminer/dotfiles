@@ -3,7 +3,6 @@ source ${HOME}/.exports
 
 # Add custom scripts to path.
 path+=(${HOME}/bin)
-path+=(${HOME}/bin/diff-so-fancy)
 
 plugins=(
     colored-man-pages
@@ -20,7 +19,6 @@ plugins=(
     httpie
     jsontools
     npm
-    nvm
     osx
     pip
     python

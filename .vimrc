@@ -145,7 +145,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-rhubarb'
 
-
 call plug#end()
 
 " Ensure Vim can find fzf; see https://github.com/junegunn/fzf#as-vim-plugin.
@@ -165,7 +164,6 @@ let g:ale_cpp_clang_options = '-Wall -std=c++17'
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'flow': ['prettier'],
 \   'javascript': ['prettier'],
 \   'typescript': ['prettier'],
 \   'typescriptreact': ['prettier'],
@@ -201,11 +199,6 @@ set background=dark
 
 
 " File Types:
-
-augroup twig_ft
-  au!
-  autocmd BufNewFile,BufRead *.js.flow   set syntax=javascript
-augroup END
 
 " Reformat Markdown files to fit within 80 characters via :gq.
 " https://thoughtbot.com/blog/wrap-existing-text-at-80-characters-in-vim
