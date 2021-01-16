@@ -43,4 +43,5 @@ echo "Doing additional configuration."
 
 # https://stackoverflow.com/a/40066889
 echo "pinentry-program /usr/local/bin/pinentry-mac" >> ~/.gnupg/gpg-agent.conf
+mkdir ~/.gnupg
 killall gpg-agent
