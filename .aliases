@@ -1,9 +1,11 @@
 alias cat="bat"
+alias httpserver="python3 -m http.server"
 alias ip="curl --silent http://checkip.dyndns.org/ | grep --extended-regexp --only-matching '\d+\.\d+\.\d+\.\d+'"
 alias mkdir="mkdir -p"
 alias ping="prettyping --nolegend"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias top="htop"
+alias ulog="vim ~/Library/Logs/Unity/Editor.log"
 alias yoink="open -a Yoink"
 
 # Windows WSL aliases.
