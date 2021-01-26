@@ -41,7 +41,6 @@ brew install \
     dos2unix \
     fasd \
     ffmpeg \
-    gnupg \
     htop \
     httpie \
     lua \
