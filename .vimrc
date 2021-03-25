@@ -190,7 +190,7 @@ let g:cursormode_color_map = {
 \}
 let g:vimwiki_dir_link = 'index'
 let g:vimwiki_list = [
-\   {'path': '~/Dropbox/Notes/', 'syntax': 'markdown', 'ext': '.md'}
+\   {'path': '~/Library/Mobile\ Documents/com~apple~CloudDocs/Wiki', 'syntax': 'markdown', 'ext': '.md'}
 \]
 
 set omnifunc=ale#completion#OmniFunc
