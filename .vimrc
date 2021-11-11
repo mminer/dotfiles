@@ -130,7 +130,6 @@ Plug 'ervandew/supertab'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'nelstrom/vim-visual-star-search'
-Plug 'vimwiki/vimwiki'
 
 " Fixes mistyped capitalized commands. :W becomes :w, :Q becomes :q, and so on.
 Plug 'takac/vim-commandcaps'
@@ -188,10 +187,6 @@ let g:cursormode_color_map = {
 \   'V': g:airline#themes#{g:airline_theme}#palette.visual.airline_a[1],
 \   '\<C-V>': g:airline#themes#{g:airline_theme}#palette.visual.airline_a[1],
 \}
-let g:vimwiki_dir_link = 'index'
-let g:vimwiki_list = [
-\   {'path': '~/Library/Mobile\ Documents/com~apple~CloudDocs/Wiki', 'syntax': 'markdown', 'ext': '.md'}
-\]
 
 set omnifunc=ale#completion#OmniFunc
 
