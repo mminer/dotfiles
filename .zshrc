@@ -18,8 +18,8 @@ plugins=(
     history
     httpie
     jsontools
+    macos
     npm
-    osx
     pip
     python
     redis-cli

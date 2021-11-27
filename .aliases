@@ -1,4 +1,5 @@
 alias cat="bat"
+alias filebytes="stat -f%z"
 alias httpserver="python3 -m http.server"
 alias ip="curl --silent http://checkip.dyndns.org/ | grep --extended-regexp --only-matching '\d+\.\d+\.\d+\.\d+'"
 alias mkdir="mkdir -p"

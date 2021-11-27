@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# https://github.com/slhck/ffmpeg-normalize/wiki/examples#check-the-loudness-statistics
+ffmpeg-normalize --dry-run --force --print-stats --progress "$1" \
+    --sample-rate 44100 # To hide warning about sample rate
