@@ -1,13 +1,14 @@
+alias bb="bbedit"
 alias cat="bat"
 alias filebytes="stat -f%z"
-alias httpserver="python3 -m http.server"
 alias ip="curl --silent http://checkip.dyndns.org/ | grep --extended-regexp --only-matching '\d+\.\d+\.\d+\.\d+'"
 alias mkdir="mkdir -p"
 alias ping="prettyping --nolegend"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias server="python3 -m http.server"
 alias top="htop"
 alias ulog="vim ~/Library/Logs/Unity/Editor.log"
-alias yoink="open -a Yoink"
+alias y="open -a Yoink"
 
 # Windows WSL aliases.
 if [[ -n "$WSL_DISTRO_NAME" ]]; then

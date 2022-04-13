@@ -1,3 +1,5 @@
 source ~/.vimrc
 noremap <leader>t :action SearchEverywhere<cr>
 set ideajoin
+set noerrorbells
+set visualbell

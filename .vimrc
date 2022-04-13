@@ -122,6 +122,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'easymotion/vim-easymotion'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf.vim'
+Plug 'beyondmarc/hlsl.vim'
 Plug 'tomasr/molokai'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-repeat'
@@ -170,6 +171,7 @@ let g:ale_fixers = {
 \}
 let g:ale_linters = {
 \   'cpp': ['ccls', 'clang', 'clangcheck', 'clangd', 'clangtidy', 'clazy', 'cppcheck', 'cpplint', 'cquery', 'flawfinder'],
+\   'cs': [],
 \   'html': [],
 \}
 let g:ale_linters_ignore = {
@@ -203,3 +205,5 @@ set background=dark
 " Reformat Markdown files to fit within 80 characters via :gq.
 " https://thoughtbot.com/blog/wrap-existing-text-at-80-characters-in-vim
 au BufRead,BufNewFile *.md setlocal textwidth=80
+
+au BufRead,BufNewFile *.uxml set filetype=xml

@@ -23,5 +23,6 @@ export ZSH_THEME='miner'
 
 # Configure tmux if we're using iTerm2.
 if [[ -n "$ITERM_SESSION_ID" ]]; then
+    export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=true
     export ZSH_TMUX_ITERM2=true
 fi
