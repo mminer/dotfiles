@@ -19,9 +19,9 @@ brew install \
 
 # Install Git and supporting tools.
 brew install \
-    diff-so-fancy \
     gh \
     git \
+    git-delta \
     git-lfs
 
 # Install fzf and its key bindings.

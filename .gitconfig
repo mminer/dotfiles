@@ -1,24 +1,25 @@
-[color]
-	ui = true
-[color "diff"]
-	commit = yellow bold
-	frag = magenta bold
-	meta = yellow
-	new = green bold
-	old = red bold
-	whitespace = red reverse
-[color "diff-highlight"]
-	newHighlight = green bold 22
-	newNormal = green bold
-	oldHighlight = red bold 52
-	oldNormal = red bold
 [commit]
 	gpgsign = true
 [core]
 	excludesfile = ~/.gitignore
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = delta
 [credential]
 	helper = osxkeychain
+[delta]
+	features = decorations
+	line-numbers = true
+[delta "interactive"]
+	keep-plus-minus-markers = false
+[delta "decorations"]
+	commit-decoration-style = blue ol
+	commit-style = raw
+	file-style = omit
+	hunk-header-decoration-style = blue box
+	hunk-header-file-style = red
+	hunk-header-line-number-style = "#067a00"
+	hunk-header-style = file line-number syntax
+[diff]
+	colorMoved = default
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	process = git-lfs filter-process
@@ -26,6 +27,10 @@
 	smudge = git-lfs smudge -- %f
 [gpg]
 	program = gpg2
+[init]
+	defaultBranch = main
+[interactive]
+	diffFilter = delta --color-only --features=interactive
 [pull]
 	rebase = true
 [push]
