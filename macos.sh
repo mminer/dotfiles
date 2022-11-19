@@ -34,4 +34,7 @@ defaults write -globalDomain PMPrintingExpandedStateForPrint -bool true
 # Support dragging a window from anywhere by holding command-control-option while dragging.
 defaults write -globalDomain NSWindowShouldDragOnGesture true
 
+# Open iTerm instead of Terminal from BBEdit's "Go Here in Terminal" command.
+defaults write com.barebones.bbedit TerminalBundleID -string "com.googlecode.iterm2"
+
 killall Dock
