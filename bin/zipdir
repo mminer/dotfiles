@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -e
+
+directory=${PWD##*/}
+cd ..
+zip -r "${directory}".zip "${directory}" --exclude "${directory}/\.*"

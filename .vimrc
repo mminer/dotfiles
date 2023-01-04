@@ -170,7 +170,7 @@ let g:ale_fixers = {
 \   'typescriptreact': ['prettier'],
 \}
 let g:ale_linters = {
-\   'cpp': ['ccls', 'clang', 'clangcheck', 'clangd', 'clangtidy', 'clazy', 'cppcheck', 'cpplint', 'cquery', 'flawfinder'],
+\   'cpp': [],
 \   'cs': [],
 \   'html': [],
 \}

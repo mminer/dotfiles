@@ -7,8 +7,8 @@ path+=(${HOME}/bin)
 plugins=(
     colored-man-pages
     colorize
-    copydir
     copyfile
+    copypath
     docker
     docker-compose
     encode64

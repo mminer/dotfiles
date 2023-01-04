@@ -39,6 +39,7 @@ brew install switchaudio-osx
 brew install \
     bat \
     dos2unix \
+    exa \
     fasd \
     ffmpeg \
     htop \

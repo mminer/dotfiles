@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# https://stackoverflow.com/a/12524345
+printf "%s" "$(< "$1")" > "$1"

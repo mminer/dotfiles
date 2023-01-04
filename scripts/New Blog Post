@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -e
+
+# Prompt for title.
+title=$(osascript -e 'text returned of (display dialog "Title:" with title "New Blog Post" default answer "" buttons {"Cancel", "Create"} default button 2)')
+
+# Create filename.
+slug=$(echo "${title}" | iconv --to-code=ASCII//TRANSLIT | tr '[:upper:]' '[:lower:]' | tr '[:blank:]' '-' | tr -cd '[:alnum:]_-')
+filename="$(date -u +%Y-%m-%d)-${slug}.md"
+path="${HOME}/Developer/mminer.github.io/_posts/${filename}"
+
+# Insert YAML front matter.
+echo "---
+title: \"${title}\"
+---
+" >> "${path}"
+
+bbedit +5 "${path}"
