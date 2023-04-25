@@ -1,5 +1,5 @@
 source ~/.vimrc
-noremap <leader>t :action SearchEverywhere<cr>
+noremap <leader>t :action GotoFile<cr>
 set ideajoin
 set noerrorbells
 set visualbell
