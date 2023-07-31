@@ -22,7 +22,8 @@ brew install \
     gh \
     git \
     git-delta \
-    git-lfs
+    git-lfs \
+    jesseduffield/lazygit/lazygit
 
 # Install fzf and its key bindings.
 # https://github.com/junegunn/fzf#using-homebrew-or-linuxbrew
