@@ -1,4 +1,3 @@
-alias bb="bbedit"
 alias cat="bat"
 alias countlines="git ls-files | xargs wc -l"
 alias filebytes="stat -f%z"
@@ -7,12 +6,21 @@ alias lg="lazygit"
 alias mkdir="mkdir -p"
 alias ping="prettyping --nolegend"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias python="python3"
+alias redis="docker-compose run redis redis-cli -h redis"
 alias server="python3 -m http.server"
 alias top="htop"
-alias ulog="vim ~/Library/Logs/Unity/Editor.log"
-alias y="open -a Yoink"
 
-# Windows WSL aliases.
+# macOS Aliases
+if [[ "$(uname)" == "Darwin" ]]; then
+    alias bb="bbedit"
+    alias love="/Applications/love.app/Contents/MacOS/love"
+    alias pd="~/Developer/PlaydateSDK/bin/Playdate\ Simulator.app/Contents/MacOS/Playdate\ Simulator"
+    alias ulog="$EDITOR ~/Library/Logs/Unity/Editor.log"
+    alias y="open -a Yoink"
+fi
+
+# Windows WSL Aliases
 if [[ -n "$WSL_DISTRO_NAME" ]]; then
     alias open="cmd.exe /C start"
     alias taskkill="taskkill.exe /F /IM"

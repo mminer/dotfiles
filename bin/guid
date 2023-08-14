@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Prints the GUID from a Unity .meta file.
+echo $(awk '/^guid: /{print $2}' "$1.meta")

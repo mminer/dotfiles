@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Finds where a Unity asset is referenced given its meta file.
+guid=$(awk '/^guid: /{print $2}' "$1.meta")
+echo -e "GUID: ${guid}\n"
+rg "${guid}"

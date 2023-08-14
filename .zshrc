@@ -1,8 +1,5 @@
-source ${HOME}/.aliases
-source ${HOME}/.exports
-
-# Add custom scripts to path.
-path+=(${HOME}/bin)
+source $HOME/.aliases
+source $HOME/.exports
 
 plugins=(
     colored-man-pages
@@ -48,5 +45,3 @@ bindkey -M viins 'jj' vi-cmd-mode
 foreground() { fg }
 zle -N foreground
 bindkey '^Z' foreground
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
