@@ -37,4 +37,7 @@ defaults write -globalDomain NSWindowShouldDragOnGesture true
 # Open iTerm instead of Terminal from BBEdit's "Go Here in Terminal" command.
 defaults write com.barebones.bbedit TerminalBundleID -string "com.googlecode.iterm2"
 
+# https://github.com/rxhanson/Rectangle#window-resizing-is-off-slightly-for-iterm2
+defaults write com.googlecode.iterm2 DisableWindowSizeSnap -integer 1
+
 killall Dock
