@@ -25,7 +25,7 @@ set showmatch
 set smartcase
 set softtabstop=-1
 set textwidth=80
-set wildignore+=*.o,*.obj,.git,*.pyc,*.class,*.unity,.*,venv,*.meta,*.pdf,*.prefab,*.psd,*.fbx,*.mat,node_modules,bower_components
+set wildignore+=*.class,*.fbx,*.mat,*.meta,*.o,*.obj,*.pdf,*.prefab,*.psd,*.pyc,*.unity,.*,venv,.git,node_modules
 set wildmode=list:longest,full
 
 " Enable dynamic popovers. Used by ALE to display type info on mouse hover.
@@ -69,6 +69,7 @@ nmap <silent> <leader>= :vsplit<cr>
 
 nmap <leader>; :Buffers<cr>
 nmap <leader>/ :ALEHover<cr>
+nmap <leader>c :Make<cr>
 nmap <leader>d :ALEGoToDefinition<cr>
 nmap <leader>g :GitGutterFold<cr>
 nmap <leader>m :marks<cr>
@@ -100,54 +101,6 @@ com! FormatJSON %!python -m json.tool
 
 " Plugins:
 
-" Automatically install Vim Plug if it's not already installed.
-" https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
-if empty(glob('~/.vim/autoload/plug.vim'))
-    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-" Has to be set before ALE loads.
-let g:ale_set_balloons = 1
-
-call plug#begin('~/.vim/plugged')
-
-Plug 'tpope/vim-abolish'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'w0rp/ale'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-dispatch'
-Plug 'easymotion/vim-easymotion'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'junegunn/fzf.vim'
-Plug 'beyondmarc/hlsl.vim'
-Plug 'tomasr/molokai'
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-sensible'
-Plug 'ervandew/supertab'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'nelstrom/vim-visual-star-search'
-
-" Fixes mistyped capitalized commands. :W becomes :w, :Q becomes :q, and so on.
-Plug 'takac/vim-commandcaps'
-
-" Commands for common file operations: Delete, Rename, Move, etc.
-Plug 'tpope/vim-eunuch'
-
-" Enables mouse support and shows thin cursor in insert mode.
-Plug 'wincent/terminus'
-
-" Integrate with Git. Rhubarb enables fugutive.vim's :Gbrowse for GitHub.
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-rhubarb'
-
-call plug#end()
-
 " Ensure Vim can find fzf; see https://github.com/junegunn/fzf#as-vim-plugin.
 set rtp+=/usr/local/opt/fzf " If installed using Homebrew
 set rtp+=~/.fzf             " If installed using Git
@@ -178,6 +131,7 @@ let g:ale_linters_ignore = {
 \   'javascript': ['tslint', 'tsserver'],
 \   'javascriptreact': ['tslint', 'tsserver'],
 \}
+let g:ale_set_balloons = 1
 let g:jsx_ext_required = 0
 let g:SuperTabDefaultCompletionType = 'context'
 let g:cursormode_color_map = {
