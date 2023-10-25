@@ -29,7 +29,7 @@ brew install \
 # https://github.com/junegunn/fzf#using-homebrew-or-linuxbrew
 brew install fzf
 
-$(brew --prefix)/opt/fzf/install --completion --key-bindings --no-update-rc \
+"$(brew --prefix)/opt/fzf/install" --completion --key-bindings --no-update-rc \
     --no-bash --no-fish
 
 # Required by the Launchbar Switch Audio action.
@@ -50,6 +50,7 @@ brew install \
     pinentry-mac \
     prettyping \
     ripgrep \
+    shellcheck \
     swiftlint \
     tldr \
     tmux \
