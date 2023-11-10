@@ -25,7 +25,7 @@ set showmatch
 set smartcase
 set softtabstop=-1
 set textwidth=80
-set wildignore+=*.class,*.fbx,*.mat,*.meta,*.o,*.obj,*.pdf,*.prefab,*.psd,*.pyc,*.unity,.*,venv,.git,node_modules
+set wildignore+=*.class,*.fbx,*.mat,*.meta,*.o,*.obj,*.pdf,*.pdx,*.prefab,*.psd,*.pyc,*.unity,.*,venv,.git,node_modules
 set wildmode=list:longest,full
 
 " Enable dynamic popovers. Used by ALE to display type info on mouse hover.

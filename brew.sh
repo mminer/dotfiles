@@ -54,6 +54,7 @@ brew install \
     swiftlint \
     tldr \
     tmux \
+    trash \
     tree \
     youtube-dl
 
