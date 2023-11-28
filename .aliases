@@ -14,7 +14,6 @@ alias top="htop"
 
 # macOS Aliases
 if [[ "$(uname)" == "Darwin" ]]; then
-    alias bb="bbedit"
     alias love="/Applications/love.app/Contents/MacOS/love"
     alias pd="~/Developer/PlaydateSDK/bin/Playdate\ Simulator.app/Contents/MacOS/Playdate\ Simulator"
     alias ulog="$EDITOR ~/Library/Logs/Unity/Editor.log"

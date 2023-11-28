@@ -2,6 +2,7 @@ source $HOME/.aliases
 source $HOME/.exports
 
 plugins=(
+    bbedit
     colored-man-pages
     colorize
     copyfile
@@ -9,7 +10,6 @@ plugins=(
     docker
     docker-compose
     encode64
-    fasd
     git
     gpg-agent
     history
@@ -24,6 +24,7 @@ plugins=(
     tmux
     vi-mode
     xcode
+    z
     zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting

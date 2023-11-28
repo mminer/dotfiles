@@ -1,19 +1,19 @@
 #!/usr/bin/env bash
 
 plugins_path="$HOME/.vim/pack/mminer/start"
-mkdir -p ${plugins_path}
+mkdir -p "${plugins_path}"
 
 function get() {
     url=$1
-    name=$(basename "$url" .git)
-    path="$plugins_path/$name"
+    name=$(basename "${url}" .git)
+    path="${plugins_path}/${name}"
 
-    if [ -d $path ]; then
-        echo "Updating $name"
-        git -C $path pull
+    if [[ -d "${path}" ]]; then
+        echo "Updating ${name}"
+        git -C "${path}" pull
     else
         echo "Cloning $name"
-        git clone $url $path
+        git clone "${url}" "${path}"
     fi
 }
 
