@@ -30,7 +30,7 @@ echo "Installing Ruby packages."
 gem colorls install jekyll jekyll-feed
 
 echo "Installing vim plugins."
-vim +PlugInstall +qall
+./vimplugins.sh
 
 echo "Changing default shell to ZSH."
 echo $(brew --prefix)/bin/zsh | sudo tee -a /etc/shells
