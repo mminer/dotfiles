@@ -45,7 +45,6 @@ brew install \
     prettyping \
     ripgrep \
     shellcheck \
-    swiftlint \
     tldr \
     trash \
     tree
