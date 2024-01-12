@@ -32,10 +32,6 @@ brew install fzf
 "$(brew --prefix)/opt/fzf/install" --completion --key-bindings --no-update-rc \
     --no-bash --no-fish
 
-# Required by the Launchbar Switch Audio action.
-# https://renaghan.com/launchbar/switch-audio/
-brew install switchaudio-osx
-
 # Install other oft-used tools.
 brew install \
     bat \
@@ -51,9 +47,7 @@ brew install \
     shellcheck \
     swiftlint \
     tldr \
-    tmux \
     trash \
-    tree \
-    youtube-dl
+    tree
 
 brew cleanup
