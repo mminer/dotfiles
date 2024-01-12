@@ -21,6 +21,7 @@ plugins=(
     python
     redis-cli
     ripgrep
+    rust
     tmux
     vi-mode
     xcode
