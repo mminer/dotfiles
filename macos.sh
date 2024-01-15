@@ -10,7 +10,6 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
-defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Avoid creating .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true

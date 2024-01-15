@@ -22,7 +22,6 @@ plugins=(
     redis-cli
     ripgrep
     rust
-    tmux
     vi-mode
     xcode
     z
