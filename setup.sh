@@ -8,20 +8,24 @@ git submodule init
 git submodule update
 
 echo "Symlinking dotfiles."
-ln -s ${PWD}/.aliases ~/.aliases
-ln -s ${PWD}/.exports ~/.exports
-ln -s ${PWD}/.gitconfig ~/.gitconfig
-ln -s ${PWD}/.gitignore ~/.gitignore
-ln -s ${PWD}/.hushlogin ~/.hushlogin
-ln -s ${PWD}/.ideavimrc ~/.ideavimrc
-ln -s ${PWD}/.oh-my-zsh ~/.oh-my-zsh
-ln -s ${PWD}/.ripgreprc ~/.ripgreprc
-ln -s ${PWD}/.ssh/config ~/.ssh/config
-ln -s ${PWD}/.vimrc ~/.vimrc
-ln -s ${PWD}/.zsh ~/.zsh
-ln -s ${PWD}/.zshrc ~/.zshrc
-ln -s ${PWD}/bin ~/bin
+ln -s "${PWD}/.aliases" ~/.aliases
+ln -s "${PWD}/.exports" ~/.exports
+ln -s "${PWD}/.gitconfig" ~/.gitconfig
+ln -s "${PWD}/.gitignore" ~/.gitignore
+ln -s "${PWD}/.hushlogin" ~/.hushlogin
+ln -s "${PWD}/.ideavimrc" ~/.ideavimrc
+ln -s "${PWD}/.oh-my-zsh" ~/.oh-my-zsh
+ln -s "${PWD}/.ripgreprc" ~/.ripgreprc
+ln -s "${PWD}/.ssh/config" ~/.ssh/config
+ln -s "${PWD}/.vimrc" ~/.vimrc
+ln -s "${PWD}/.zsh" ~/.zsh
+ln -s "${PWD}/.zshrc" ~/.zshrc
+
+ln -s "${PWD}/bin" ~/bin
 chflags -h hidden ~/bin
+
+mkdir -p ~/.config/lazygit
+ln -s "${PWD}/lazygit.yml" ~/.config/lazygit/config.yml
 
 echo "Installing Homebrew and packages."
 ./brew.sh
@@ -33,8 +37,8 @@ echo "Installing vim plugins."
 ./vimplugins.sh
 
 echo "Changing default shell to ZSH."
-echo $(brew --prefix)/bin/zsh | sudo tee -a /etc/shells
-chsh -s $(brew --prefix)/bin/zsh
+echo "$(brew --prefix)/bin/zsh" | sudo tee -a /etc/shells
+chsh -s "$(brew --prefix)/bin/zsh"
 
 echo "Configuring macOS."
 ./macos.sh
