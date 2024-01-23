@@ -31,7 +31,7 @@ echo "Installing Homebrew and packages."
 ./brew.sh
 
 echo "Installing Ruby packages."
-gem colorls install jekyll jekyll-feed
+"$(brew --prefix)/opt/ruby/bin/gem" install jekyll jekyll-feed
 
 echo "Installing vim plugins."
 ./vimplugins.sh

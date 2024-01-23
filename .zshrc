@@ -46,3 +46,9 @@ bindkey -M viins 'jj' vi-cmd-mode
 foreground() { fg }
 zle -N foreground
 bindkey '^Z' foreground
+
+# Use Homebrew's Ruby instead of the system default.
+if [ -d "/usr/local/opt/ruby/bin" ]; then
+  export PATH=/usr/local/opt/ruby/bin:$PATH
+  export PATH=`gem environment gemdir`/bin:$PATH
+fi
