@@ -1,3 +1,6 @@
+[commit]
+	gpgsign = true
+	verbose = true
 [core]
 	excludesfile = ~/.gitignore
 	pager = delta
@@ -17,7 +20,12 @@
 	hunk-header-line-number-style = "#067a00"
 	hunk-header-style = file line-number syntax
 [diff]
+	algorithm = histogram
 	colorMoved = default
+	submodule = log
+[fetch]
+	prune = true
+	prunetags = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	process = git-lfs filter-process
@@ -25,20 +33,29 @@
 	smudge = git-lfs smudge -- %f
 [gpg]
 	program = gpg2
+[help]
+	autocorrect = prompt
 [init]
 	defaultBranch = main
 [interactive]
 	diffFilter = delta --color-only --features=interactive
+[merge]
+	conflictStyle = zdiff3
 [pull]
 	rebase = true
 [push]
-	default = simple
+	default = current
 	followTags = true
 [rebase]
 	autosquash = true
 	autostash = true
+[rerere]
+	enabled = true
 [status]
 	showUntrackedFiles = all
+	submoduleSummary = true
+[submodule]
+	recurse = true
 [user]
 	email = matthew@matthewminer.com
 	name = Matthew Miner
