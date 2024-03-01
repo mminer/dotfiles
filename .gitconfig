@@ -32,7 +32,7 @@
 	required = true
 	smudge = git-lfs smudge -- %f
 [gpg]
-	program = gpg2
+	format = ssh
 [help]
 	autocorrect = prompt
 [init]
@@ -59,3 +59,4 @@
 [user]
 	email = matthew@matthewminer.com
 	name = Matthew Miner
+	signingkey = /Users/mminer/.ssh/id_ed25519.pub
