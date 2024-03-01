@@ -2,6 +2,7 @@
 
 chflags nohidden ~/Library
 
+defaults write -globalDomain ApplePressAndHoldEnabled -bool false
 defaults write -globalDomain AppleShowAllExtensions -bool true
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 defaults write com.apple.dock show-process-indicators -bool false

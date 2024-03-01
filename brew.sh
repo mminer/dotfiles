@@ -36,6 +36,7 @@ brew install fzf
 brew install \
     bat \
     dos2unix \
+    exif-tool \
     ffmpeg \
     htop \
     httpie \
