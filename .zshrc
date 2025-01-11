@@ -9,9 +9,7 @@ plugins=(
     copypath
     docker
     docker-compose
-    encode64
     git
-    gpg-agent
     history
     httpie
     jsontools
@@ -20,7 +18,6 @@ plugins=(
     pip
     python
     redis-cli
-    ripgrep
     rust
     vi-mode
     xcode

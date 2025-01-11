@@ -96,7 +96,8 @@ nnoremap & :&&<CR> xnoremap & :&&<CR>
 
 " Custom Commands:
 
-com! FormatJSON %!python -m json.tool
+com! JsonFormat %!jq .
+com! JsonCompact %!jq -c .
 
 
 " Plugins:

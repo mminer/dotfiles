@@ -40,6 +40,7 @@ brew install \
     ffmpeg \
     htop \
     httpie \
+    jq \
     lua \
     noti \
     pinentry-mac \

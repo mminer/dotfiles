@@ -9,11 +9,12 @@ alias ping="prettyping --nolegend"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias python="python3"
 alias redis="docker-compose run redis redis-cli -h redis"
-alias server="python3 -m http.server"
+alias server="python3 -m http.server --bind 0.0.0.0"
 alias top="htop"
 
 # macOS Aliases
 if [[ "$(uname)" == "Darwin" ]]; then
+    alias blender="/Applications/Blender.app/Contents/MacOS/Blender"
     alias love="/Applications/love.app/Contents/MacOS/love"
     alias pd="~/Developer/PlaydateSDK/bin/Playdate\ Simulator.app/Contents/MacOS/Playdate\ Simulator"
     alias ulog="$EDITOR ~/Library/Logs/Unity/Editor.log"
