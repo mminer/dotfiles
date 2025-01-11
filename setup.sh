@@ -15,6 +15,7 @@ ln -s "${PWD}/.gitignore" ~/.gitignore
 ln -s "${PWD}/.hushlogin" ~/.hushlogin
 ln -s "${PWD}/.ideavimrc" ~/.ideavimrc
 ln -s "${PWD}/.oh-my-zsh" ~/.oh-my-zsh
+ln -s "${PWD}/.proselintrc" ~/.proselintrc
 ln -s "${PWD}/.ripgreprc" ~/.ripgreprc
 ln -s "${PWD}/.ssh/config" ~/.ssh/config
 ln -s "${PWD}/.vimrc" ~/.vimrc
