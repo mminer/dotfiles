@@ -9,6 +9,7 @@ plugins=(
     copypath
     docker
     docker-compose
+    gh
     git
     history
     httpie

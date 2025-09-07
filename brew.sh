@@ -37,6 +37,8 @@ brew install \
     bat \
     dos2unix \
     exif-tool \
+    eza \
+    fd \
     ffmpeg \
     htop \
     httpie \
@@ -49,6 +51,7 @@ brew install \
     shellcheck \
     tldr \
     trash \
-    tree
+    tree \
+    yq
 
 brew cleanup

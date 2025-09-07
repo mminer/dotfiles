@@ -34,6 +34,11 @@ echo "Installing Homebrew and packages."
 echo "Installing Ruby packages."
 "$(brew --prefix)/opt/ruby/bin/gem" install jekyll jekyll-feed
 
+echo "Installing npm packages."
+npm install -g \
+    @anthropic-ai/claude-code \
+    @gltf-transform/cli
+
 echo "Installing vim plugins."
 ./vimplugins.sh
 
