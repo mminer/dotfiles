@@ -11,9 +11,9 @@ class CORSRequestHandler(SimpleHTTPRequestHandler):
         self.send_header("Access-Control-Allow-Origin", "*")
         SimpleHTTPRequestHandler.end_headers(self)
 
-httpd = HTTPServer((host, port), CORSRequestHandler)
+server = HTTPServer((host, port), CORSRequestHandler)
 ssl_context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
 ssl_context.load_cert_chain("/Users/mminer/Developer/certs/cert.pem", keyfile="/Users/mminer/Developer/certs/key.pem")
-httpd.socket = ssl_context.wrap_socket(httpd.socket, server_side=True)
+server.socket = ssl_context.wrap_socket(server.socket, server_side=True)
 print(f"Serving on https://{host}:{port}")
-httpd.serve_forever()
+server.serve_forever()
