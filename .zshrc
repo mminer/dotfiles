@@ -19,7 +19,6 @@ plugins=(
     python
     redis-cli
     rust
-    vi-mode
     xcode
     z
     zsh-autosuggestions
@@ -34,10 +33,6 @@ source ${ZSH}/oh-my-zsh.sh
 
 # Turn off ZSH autocorrect.
 unsetopt correct_all
-
-# Use same keys to switch to command mode as vim.
-# https://superuser.com/a/353127
-bindkey -M viins 'jj' vi-cmd-mode
 
 # Reopen suspended session using ctrl-z (same command used to suspend it).
 foreground() { fg }
