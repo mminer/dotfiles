@@ -52,6 +52,7 @@ brew install \
     tldr \
     trash \
     tree \
+    vale \
     yq
 
 brew cleanup

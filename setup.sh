@@ -37,7 +37,8 @@ echo "Installing Ruby packages."
 echo "Installing npm packages."
 npm install -g \
     @anthropic-ai/claude-code \
-    @gltf-transform/cli
+    @gltf-transform/cli \
+    write-good
 
 echo "Installing vim plugins."
 ./vimplugins.sh
