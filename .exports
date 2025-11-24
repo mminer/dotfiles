@@ -26,3 +26,5 @@ if [[ "$(uname)" == "Darwin" ]]; then
     export PATH="$PATH:$HOME/Developer/PlaydateSDK/bin"
     export PLAYDATE_SDK_PATH="$HOME/Developer/PlaydateSDK"
 fi
+
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
