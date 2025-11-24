@@ -1,5 +1,6 @@
 alias cat="bat"
 alias countlines="git ls-files | xargs wc -l"
+alias cpwd="pwd | tr -d '\n' | pbcopy"
 alias filebytes="stat -f%z"
 alias ip="curl --silent http://checkip.dyndns.org/ | grep --extended-regexp --only-matching '\d+\.\d+\.\d+\.\d+'"
 alias km="/Applications/Keyboard\ Maestro.app/Contents/MacOS/keyboardmaestro"
@@ -10,7 +11,18 @@ alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias python="python3"
 alias redis="docker-compose run redis redis-cli -h redis"
 alias server="python3 -m http.server --bind 0.0.0.0"
+alias shebang='echo "#!/usr/bin/env bash"'
 alias top="htop"
+
+temp () {
+  cd "$(mktemp -d)"
+  chmod -R 0700 .
+  if [[ $# -eq 1 ]]; then
+    \mkdir -p "$1"
+    cd "$1"
+    chmod -R 0700 .
+  fi
+}
 
 # macOS Aliases
 if [[ "$(uname)" == "Darwin" ]]; then
