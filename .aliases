@@ -1,9 +1,7 @@
 alias cat="bat"
 alias countlines="git ls-files | xargs wc -l"
-alias cpwd="pwd | tr -d '\n' | pbcopy"
 alias filebytes="stat -f%z"
 alias ip="curl --silent http://checkip.dyndns.org/ | grep --extended-regexp --only-matching '\d+\.\d+\.\d+\.\d+'"
-alias km="/Applications/Keyboard\ Maestro.app/Contents/MacOS/keyboardmaestro"
 alias lg="lazygit"
 alias mkdir="mkdir -p"
 alias ping="prettyping --nolegend"
@@ -14,20 +12,12 @@ alias server="python3 -m http.server --bind 0.0.0.0"
 alias shebang='echo "#!/usr/bin/env bash"'
 alias top="htop"
 
-temp () {
-  cd "$(mktemp -d)"
-  chmod -R 0700 .
-  if [[ $# -eq 1 ]]; then
-    \mkdir -p "$1"
-    cd "$1"
-    chmod -R 0700 .
-  fi
-}
-
 # macOS Aliases
 if [[ "$(uname)" == "Darwin" ]]; then
     alias blender="/Applications/Blender.app/Contents/MacOS/Blender"
+    alias cpwd="pwd | tr -d '\n' | pbcopy"
     alias love="/Applications/love.app/Contents/MacOS/love"
+    alias km="/Applications/Keyboard\ Maestro.app/Contents/MacOS/keyboardmaestro"
     alias pd="~/Developer/PlaydateSDK/bin/Playdate\ Simulator.app/Contents/MacOS/Playdate\ Simulator"
     alias ulog="$EDITOR ~/Library/Logs/Unity/Editor.log"
     alias y="open -a Yoink"
@@ -38,3 +28,13 @@ if [[ -n "$WSL_DISTRO_NAME" ]]; then
     alias open="cmd.exe /C start"
     alias taskkill="taskkill.exe /F /IM"
 fi
+
+temp () {
+  cd "$(mktemp -d)"
+  chmod -R 0700 .
+  if [[ $# -eq 1 ]]; then
+    \mkdir -p "$1"
+    cd "$1"
+    chmod -R 0700 .
+  fi
+}
