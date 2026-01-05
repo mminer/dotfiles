@@ -40,6 +40,17 @@ foreground() { fg }
 zle -N foreground
 bindkey '^Z' foreground
 
+temp() {
+    cd "$(mktemp -d)"
+    chmod -R 0700 .
+
+    if [[ $# -eq 1 ]]; then
+        \mkdir -p "$1"
+        cd "$1"
+        chmod -R 0700 .
+    fi
+}
+
 # Use Homebrew's Ruby instead of the system default.
 if [ -d "/usr/local/opt/ruby/bin" ]; then
   export PATH=/usr/local/opt/ruby/bin:$PATH
