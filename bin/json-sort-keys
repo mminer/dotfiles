@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+jq --sort-keys . "$1" > temp.json && mv temp.json "$1"
