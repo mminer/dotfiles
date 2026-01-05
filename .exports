@@ -17,6 +17,10 @@ export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 export VISUAL="vim"
 export EDITOR="$VISUAL"
 
+# Wasmtime
+export WASMTIME_HOME="$HOME/.wasmtime"
+export PATH="$PATH:$WASMTIME_HOME/bin"
+
 # macOS-specific configurations.
 if [[ "$(uname)" == "Darwin" ]]; then
     # Homebrew
