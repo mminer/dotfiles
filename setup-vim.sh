@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
+echo "Installing vim plugins."
+
 plugins_path="$HOME/.vim/pack/mminer/start"
 mkdir -p "${plugins_path}"
 

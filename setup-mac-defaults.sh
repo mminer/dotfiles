@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-chflags nohidden ~/Library
+echo "Writing defaults settings."
 
 defaults write -globalDomain ApplePressAndHoldEnabled -bool false
 defaults write -globalDomain AppleShowAllExtensions -bool true
@@ -37,4 +37,5 @@ defaults write com.barebones.bbedit TerminalBundleID -string "com.googlecode.ite
 # https://github.com/rxhanson/Rectangle#window-resizing-is-off-slightly-for-iterm2
 defaults write com.googlecode.iterm2 DisableWindowSizeSnap -integer 1
 
+# Required for some settings to take effect.
 killall Dock

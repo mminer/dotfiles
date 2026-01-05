@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-set -e
+set -euo pipefail
+
+echo "Installing Homebrew and packages."
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -36,7 +38,7 @@ brew install fzf
 brew install \
     bat \
     dos2unix \
-    exif-tool \
+    exiftool \
     eza \
     fd \
     ffmpeg \
