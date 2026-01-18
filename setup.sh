@@ -30,6 +30,8 @@ ln -sf "${PWD}/bin" ~/bin
 
 if [[ "$(uname)" == "Darwin" ]]; then
     ./setup-mac.sh
+elif [[ "$(uname)" == "Linux" ]] || grep -qi microsoft /proc/version 2>/dev/null; then
+    ./setup-apt.sh
 fi
 
 ./setup-npm.sh
