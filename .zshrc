@@ -11,7 +11,6 @@ plugins=(
     docker-compose
     gh
     git
-    history
     httpie
     jsontools
     macos
@@ -19,8 +18,6 @@ plugins=(
     pip
     python
     redis-cli
-    rust
-    xcode
     z
     zsh-autosuggestions
     zsh-completions
