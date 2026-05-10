@@ -75,7 +75,6 @@ nmap <leader>g :GitGutterFold<cr>
 nmap <leader>m :marks<cr>
 nmap <leader>r :ALEFindReferences<cr>
 nmap <leader>s <Plug>DashSearch
-nmap <leader>t :Files<cr>
 
 " Clear search highlights.
 nmap <leader><leader><leader> :nohlsearch<cr>
@@ -91,8 +90,9 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 " Automatically reuse last flags when repeating substitution via :&.
 " From Practical Vim, tip 93.
-nnoremap & :&&<CR> xnoremap & :&&<CR>
+nnoremap & :&&<CR> xnoremap & :&&<cr>
 
+noremap <silent> <C-t> :Files<cr>
 
 " Custom Commands:
 

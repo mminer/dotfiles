@@ -25,6 +25,10 @@ fi
 
 # Windows WSL Aliases
 if [[ -n "$WSL_DISTRO_NAME" ]]; then
+    alias git="git.exe"
+    alias lg="lazygit.exe"
+    alias ps1="powershell.exe"
     alias open="cmd.exe /C start"
+    alias rg="rg.exe"
     alias taskkill="taskkill.exe /F /IM"
 fi
