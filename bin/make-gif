@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+input_path="$1"
+input_dir=$(dirname -- "$input_path")
+input_filename=$(basename -- "$input_path")
+
+output_filename="${input_filename%.*}.gif"
+output_path="$input_dir/$output_filename"
+
+palette_path="/tmp/palette.png"
+
+fps=12
+width=640
+
+ffmpeg -i "$input_path" -vf "fps=$fps,scale=$width:-1:flags=lanczos,palettegen" "$palette_path"
+ffmpeg -i "$input_path" -i "$palette_path" -filter_complex "fps=$fps,scale=$width:-1:flags=lanczos[x];[x][1:v]paletteuse" "$output_path"
+rm "$palette_path"

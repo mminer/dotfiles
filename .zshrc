@@ -51,3 +51,6 @@ temp() {
         chmod -R 0700 .
     fi
 }
+
+# Unity CLI
+. "/Users/mminer/.unity/env"

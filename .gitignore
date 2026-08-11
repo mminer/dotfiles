@@ -166,4 +166,5 @@ Temporary Items
 
 # End of https://www.toptal.com/developers/gitignore/api/jetbrains,linux,macos
 
+.DS_Store
 .rgignore
