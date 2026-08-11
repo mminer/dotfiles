@@ -15,6 +15,7 @@ plugins=(
     jsontools
     macos
     npm
+    nvm
     pip
     python
     redis-cli
@@ -32,10 +33,6 @@ source ${ZSH}/oh-my-zsh.sh
 # Turn off ZSH autocorrect.
 unsetopt correct_all
 
-# Load nvm.
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
 # Reopen suspended session using ctrl-z (same command used to suspend it).
 foreground() { fg }
 zle -N foreground
@@ -51,6 +48,3 @@ temp() {
         chmod -R 0700 .
     fi
 }
-
-# Unity CLI
-. "/Users/mminer/.unity/env"

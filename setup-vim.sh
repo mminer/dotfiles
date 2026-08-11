@@ -23,7 +23,6 @@ function get() {
 
 get "https://github.com/editorconfig/editorconfig-vim.git"
 get "https://github.com/ervandew/supertab.git"
-get "https://github.com/github/copilot.vim.git"
 get "https://github.com/junegunn/fzf.vim.git"
 get "https://github.com/nelstrom/vim-visual-star-search.git"
 get "https://github.com/sheerun/vim-polyglot.git"
