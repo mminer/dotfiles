@@ -52,6 +52,7 @@ brew install \
     ripgrep \
     shellcheck \
     tldr \
+    tmux \
     trash \
     tree \
     vale \

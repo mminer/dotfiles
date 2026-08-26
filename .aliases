@@ -1,5 +1,6 @@
 alias cat="bat"
 alias countlines="git ls-files | xargs wc -l"
+alias desktop="ssh mminer@desktop"
 alias filebytes="stat -f%z"
 alias ip="curl --silent http://checkip.dyndns.org/ | grep --extended-regexp --only-matching '\d+\.\d+\.\d+\.\d+'"
 alias lg="lazygit"

@@ -12,6 +12,7 @@ plugins=(
     gh
     git
     httpie
+    iterm2
     jsontools
     macos
     npm
@@ -19,6 +20,7 @@ plugins=(
     pip
     python
     redis-cli
+    tmux
     z
     zsh-autosuggestions
     zsh-completions
@@ -48,3 +50,5 @@ temp() {
         chmod -R 0700 .
     fi
 }
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
