@@ -37,6 +37,7 @@ brew install fzf
 # Install other oft-used tools.
 brew install \
     bat \
+    cheat \
     dos2unix \
     exiftool \
     eza \

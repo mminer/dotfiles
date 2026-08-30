@@ -26,6 +26,9 @@ fi
 export VISUAL="vim"
 export EDITOR="$VISUAL"
 
+# Fixes some problems with my Vim configuration in tmux.
+export LANG=C.UTF-8
+
 # Wasmtime
 export WASMTIME_HOME="$HOME/.wasmtime"
 export PATH="$PATH:$WASMTIME_HOME/bin"

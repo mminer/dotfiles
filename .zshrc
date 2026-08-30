@@ -20,7 +20,6 @@ plugins=(
     pip
     python
     redis-cli
-    tmux
     z
     zsh-autosuggestions
     zsh-completions
