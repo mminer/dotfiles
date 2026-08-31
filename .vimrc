@@ -44,6 +44,12 @@ set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
 " https://github.com/airblade/vim-gitgutter#when-signs-take-a-few-seconds-to-appear
 set updatetime=100
 
+if has('persistent_undo')
+    let &undodir = expand('~/.vim/undodir')
+    call mkdir(&undodir, 'p')
+    set undofile
+endif
+
 
 " Key Bindings:
 
