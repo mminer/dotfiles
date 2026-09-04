@@ -1,4 +1,6 @@
+**/.claude/settings.local.json
 .idea
+.rgignore
 
 # Created by https://www.toptal.com/developers/gitignore/api/jetbrains,linux,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=jetbrains,linux,macos
@@ -165,6 +167,3 @@ Temporary Items
 *.icloud
 
 # End of https://www.toptal.com/developers/gitignore/api/jetbrains,linux,macos
-
-.DS_Store
-.rgignore
