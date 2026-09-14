@@ -154,9 +154,8 @@ set omnifunc=ale#completion#OmniFunc
 
 " Colours:
 
+autocmd ColorScheme * highlight Normal ctermbg=black guibg=black ctermfg=white
 colorscheme molokai
-autocmd ColorScheme * highlight Normal ctermbg=none ctermfg=white
-set background=dark
 
 
 " File Types:
