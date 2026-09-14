@@ -28,6 +28,7 @@ fi
 
 # Windows WSL Aliases
 if [[ -n "$WSL_DISTRO_NAME" ]]; then
+    alias cat="batcat"
     alias git="git.exe"
     alias lg="lazygit.exe"
     alias ps1="powershell.exe"
