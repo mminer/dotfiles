@@ -57,6 +57,7 @@ brew install \
     trash \
     tree \
     vale \
-    yq
+    yq \
+    zoxide
 
 brew cleanup

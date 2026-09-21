@@ -20,7 +20,6 @@ plugins=(
     pip
     python
     redis-cli
-    z
     zsh-autosuggestions
     zsh-completions
     zsh-syntax-highlighting

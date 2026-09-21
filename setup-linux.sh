@@ -28,3 +28,6 @@ sudo apt-get install -y \
     vale \
     vim \
     yq
+
+# zoxide
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
