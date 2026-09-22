@@ -14,6 +14,7 @@ echo "Symlinking dotfiles."
 ln -sf "${PWD}/.aliases" ~/.aliases
 ln -sf "${PWD}/.exports" ~/.exports
 ln -sf "${PWD}/.gitconfig" ~/.gitconfig
+ln -sf "${PWD}/.gitconfig-osx" ~/.gitconfig-osx
 ln -sf "${PWD}/.gitignore" ~/.gitignore
 ln -sf "${PWD}/.hushlogin" ~/.hushlogin
 ln -sf "${PWD}/.ideavimrc" ~/.ideavimrc

@@ -4,8 +4,8 @@
 [core]
 	excludesfile = ~/.gitignore
 	pager = delta
-[credential]
-	helper = osxkeychain
+[includeIf "os#darwin"]
+	path = ~/.gitconfig-osx
 [delta]
 	features = decorations
 	line-numbers = true
