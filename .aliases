@@ -36,3 +36,7 @@ if [[ -n "$WSL_DISTRO_NAME" ]]; then
     alias rg="rg.exe"
     alias taskkill="taskkill.exe /F /IM"
 fi
+
+if [[ -r "$HOME/.aliases.local" ]]; then
+    source "$HOME/.aliases.local"
+fi
